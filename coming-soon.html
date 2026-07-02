@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shanghai Connect | Coming Soon</title>
+    <meta
+      name="description"
+      content="Shanghai Connect is being refined. A polished bilingual Shanghai starter experience is coming soon."
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#0f5a4a" />
+    <style>
+      :root {
+        --ink: #0f1720;
+        --muted: #465768;
+        --paper: #f4efe5;
+        --accent: #0f5a4a;
+        --accent-soft: #2f9d84;
+        --ring: rgba(15, 90, 74, 0.2);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        color: var(--ink);
+        background:
+          radial-gradient(1100px 700px at 88% -10%, rgba(47, 157, 132, 0.22), transparent 70%),
+          radial-gradient(900px 600px at -20% 115%, rgba(15, 90, 74, 0.18), transparent 72%),
+          linear-gradient(160deg, #f9f6ef 0%, #efe6d6 100%);
+        display: grid;
+        place-items: center;
+        padding: 1.5rem;
+      }
+
+      .panel {
+        width: min(760px, 100%);
+        background: rgba(255, 255, 255, 0.72);
+        border: 1px solid rgba(15, 90, 74, 0.16);
+        border-radius: 24px;
+        backdrop-filter: blur(8px);
+        padding: clamp(1.4rem, 3.5vw, 2.5rem);
+        box-shadow:
+          0 8px 30px rgba(9, 20, 32, 0.1),
+          0 2px 0 rgba(255, 255, 255, 0.7) inset;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+        border: 1px solid rgba(15, 90, 74, 0.26);
+        color: var(--accent);
+        background: rgba(15, 90, 74, 0.06);
+        border-radius: 999px;
+        padding: 0.45rem 0.8rem;
+        letter-spacing: 0.08em;
+        font-size: 0.74rem;
+        text-transform: uppercase;
+      }
+
+      .dot {
+        width: 0.48rem;
+        height: 0.48rem;
+        border-radius: 999px;
+        background: linear-gradient(120deg, var(--accent), var(--accent-soft));
+        box-shadow: 0 0 0 7px var(--ring);
+      }
+
+      h1 {
+        margin: 1rem 0 0.6rem;
+        font-size: clamp(2rem, 6vw, 4rem);
+        line-height: 0.98;
+        letter-spacing: -0.02em;
+      }
+
+      p {
+        margin: 0;
+        font-size: clamp(1rem, 2.2vw, 1.18rem);
+        color: var(--muted);
+        max-width: 60ch;
+      }
+
+      .divider {
+        margin: 1.5rem 0 1.2rem;
+        border: none;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(15, 90, 74, 0.25), transparent);
+      }
+
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        font-size: 0.92rem;
+      }
+
+      .chip {
+        border: 1px solid rgba(15, 90, 74, 0.2);
+        border-radius: 999px;
+        padding: 0.42rem 0.7rem;
+        color: #294454;
+        background: rgba(255, 255, 255, 0.74);
+      }
+
+      .home-link {
+        display: inline-block;
+        margin-top: 1.6rem;
+        color: var(--accent);
+        text-decoration: none;
+        border-bottom: 1px solid rgba(15, 90, 74, 0.35);
+      }
+
+      .home-link:hover {
+        border-bottom-color: var(--accent);
+      }
+
+      @media (max-width: 640px) {
+        .panel {
+          border-radius: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="panel" aria-labelledby="coming-soon-title">
+      <span class="badge">
+        <span class="dot" aria-hidden="true"></span>
+        Temporary holding page
+      </span>
+
+      <h1 id="coming-soon-title">Shanghai Connect is coming soon.</h1>
+      <p>
+        We are actively refining the experience and content structure so the launch is faster, clearer, and more useful for newcomers to Shanghai.
+      </p>
+
+      <hr class="divider" />
+
+      <div class="meta" aria-label="Status">
+        <span class="chip">Bilingual UX tuning</span>
+        <span class="chip">Guide quality pass</span>
+        <span class="chip">Performance polish</span>
+      </div>
+
+      <a class="home-link" href="/index.html">Preview current build</a>
+    </main>
+  </body>
+</html>
