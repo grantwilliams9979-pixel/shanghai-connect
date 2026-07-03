@@ -4,6 +4,12 @@
   "redirects": [
     {
       "source": "/",
+      "missing": [
+        {
+          "type": "query",
+          "key": "preview"
+        }
+      ],
       "destination": "/coming-soon",
       "permanent": false
     },
