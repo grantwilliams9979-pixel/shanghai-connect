@@ -4,8 +4,9 @@
   --paper: #fffdf8;
   --surface: #ffffff;
   --line: #e4e1d8;
-  --green: #0e7c7b;
-  --green-dark: #0b6362;
+  --steel: #94a5b3;
+  --olive: #71713b;
+  --olive-dark: #55552c;
   --red: #d84a2b;
   --gold: #c99a3d;
   /* Decorative accents from the brand palette. Both fail WCAG contrast as
@@ -13,7 +14,7 @@
      large glyphs, and fills only -- never as body/label text color. */
   --coral: #ff6b5a;
   --yellow: #ffd166;
-  --mint: #eaf7f4;
+  --bone: #e2dcd0;
   --shadow: 0 24px 70px rgba(38, 50, 56, 0.16);
   color-scheme: light;
 }
@@ -245,7 +246,7 @@ h1 {
 .search-icon {
   width: 17px;
   height: 17px;
-  border: 2px solid var(--green);
+  border: 2px solid var(--olive);
   border-radius: 50%;
 }
 
@@ -255,7 +256,7 @@ h1 {
   width: 7px;
   height: 2px;
   margin: 12px 0 0 12px;
-  background: var(--green);
+  background: var(--olive);
   transform: rotate(45deg);
   transform-origin: left center;
 }
@@ -272,7 +273,7 @@ h1 {
 .icon-button {
   min-width: 54px;
   height: 46px;
-  background: var(--green);
+  background: var(--olive);
   color: white;
   font-size: 13px;
   font-weight: 850;
@@ -297,12 +298,12 @@ h1 {
 }
 
 .btn-primary {
-  background: var(--green);
+  background: var(--olive);
   color: white;
 }
 
 .btn-primary:hover {
-  background: var(--green-dark);
+  background: var(--olive-dark);
 }
 
 .btn-secondary {
@@ -318,13 +319,13 @@ h1 {
 .btn-outline {
   background: transparent;
   color: var(--ink);
-  border-color: var(--line);
+  border-color: var(--steel);
 }
 
 .btn-outline:hover {
-  background: var(--ink);
+  background: var(--olive);
   color: white;
-  border-color: var(--ink);
+  border-color: var(--olive);
 }
 
 .section,
@@ -432,7 +433,7 @@ h2 {
 .feature-callout a {
   min-width: 120px;
   padding: 0 18px;
-  background: var(--green);
+  background: var(--olive);
   color: white;
 }
 
@@ -471,7 +472,7 @@ h2 {
 }
 
 .guide-card-link:focus-visible {
-  outline: 2px solid var(--accent, #2a7c56);
+  outline: 2px solid var(--olive);
   outline-offset: -2px;
 }
 
@@ -515,8 +516,8 @@ h2 {
 
 .card-tags span {
   border-radius: 999px;
-  background: #f1eee6;
-  color: #4f5b54;
+  background: var(--bone);
+  color: var(--olive-dark);
   padding: 6px 9px;
   font-size: 12px;
   font-weight: 760;
@@ -527,7 +528,7 @@ h2 {
   align-items: center;
   gap: 4px;
   margin-top: 16px;
-  color: var(--green-dark);
+  color: var(--olive-dark);
   font-size: 13px;
   font-weight: 850;
 }
@@ -582,13 +583,13 @@ h2 {
 }
 
 .arrival-list a:focus-visible {
-  outline: 2px solid var(--green);
+  outline: 2px solid var(--olive);
   outline-offset: 2px;
 }
 
 .arrival-list span {
   grid-row: span 2;
-  color: var(--green);
+  color: var(--olive);
   font-size: 14px;
   font-weight: 850;
 }
@@ -604,7 +605,7 @@ h2 {
 }
 
 .text-link {
-  color: var(--green-dark);
+  color: var(--olive-dark);
   font-size: 14px;
   font-weight: 850;
 }
@@ -674,7 +675,7 @@ h2 {
 }
 
 .decision-grid span {
-  color: var(--green);
+  color: var(--olive);
   font-size: 13px;
   font-weight: 850;
 }
@@ -858,7 +859,7 @@ h2 {
   padding: 0 16px;
   background: var(--surface);
   border: 1px solid var(--line);
-  color: var(--green-dark);
+  color: var(--olive-dark);
 }
 
 .guide-intro {
@@ -892,7 +893,7 @@ h2 {
 
 .timeline-number,
 .app-stage {
-  color: var(--green);
+  color: var(--olive);
   font-size: 12px;
   font-weight: 850;
   letter-spacing: 0.06em;
@@ -1069,7 +1070,7 @@ h2 {
 
 .score-grid strong {
   display: block;
-  color: var(--green);
+  color: var(--olive);
   font-size: 32px;
   line-height: 1;
 }
@@ -1127,7 +1128,7 @@ h2 {
 }
 
 .comparison-table a {
-  color: var(--green-dark);
+  color: var(--olive-dark);
   font-weight: 850;
 }
 
@@ -1207,7 +1208,7 @@ h2 {
   min-width: 160px;
   margin-top: 12px;
   padding: 0 18px;
-  background: var(--green);
+  background: var(--olive);
   color: white;
 }
 
@@ -1249,7 +1250,7 @@ h2 {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 8px;
-  color: var(--green-dark);
+  color: var(--olive-dark);
   font-size: 14px;
   font-weight: 850;
 }
@@ -1388,8 +1389,8 @@ h2 {
 }
 
 .journey-card--mint {
-  background: var(--mint);
-  border-color: rgba(14, 124, 123, 0.18);
+  background: var(--bone);
+  border-color: rgba(113, 113, 59, 0.22);
 }
 
 .journey-card--coral {
@@ -1455,14 +1456,14 @@ h2 {
 .tool-tile:hover {
   transform: translateY(-2px);
   box-shadow: 0 14px 34px rgba(38, 50, 56, 0.1);
-  border-color: var(--green);
+  border-color: var(--olive);
 }
 
 .tool-tile svg {
   width: 26px;
   height: 26px;
   fill: none;
-  stroke: var(--green);
+  stroke: var(--olive);
   stroke-width: 1.8;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -1633,7 +1634,7 @@ h2 {
 }
 
 .guide-figure figcaption a {
-  color: var(--green-dark);
+  color: var(--olive-dark);
   font-weight: 760;
   text-decoration: underline;
   text-underline-offset: 2px;
