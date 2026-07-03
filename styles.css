@@ -807,15 +807,9 @@ h2 {
   font-size: 14px;
 }
 
-.site-footer p {
-  margin: 0;
+.site-footer .brand strong {
   color: var(--ink);
   font-weight: 850;
-}
-
-.site-footer div {
-  display: flex;
-  gap: 20px;
 }
 
 .guide-hero {
