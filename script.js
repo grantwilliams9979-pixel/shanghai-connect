@@ -9,7 +9,7 @@ const guides = [
     },
     tags: ["Alipay", "WeChat", "Didi"],
     meta: { en: "Starter guide", zh: "入门指南" },
-    link: "guides/essential-apps.html",
+    link: "/guides/essential-apps",
     featured: true
   },
   {
@@ -22,7 +22,7 @@ const guides = [
     },
     tags: ["Alipay", "WeChat Pay", "Payments"],
     meta: { en: "Must know", zh: "必读" },
-    link: "guides/mobile-payments-china-foreigners/index.html",
+    link: "/guides/mobile-payments-china-foreigners",
     featured: true
   },
   {
@@ -35,7 +35,7 @@ const guides = [
     },
     tags: ["VPN", "Setup", "Internet"],
     meta: { en: "Before you fly", zh: "出发前" },
-    link: "guides/best-vpns-for-china.html",
+    link: "/guides/best-vpns-for-china",
     featured: true
   },
   {
@@ -48,7 +48,7 @@ const guides = [
     },
     tags: ["Metro", "Airports", "Maps"],
     meta: { en: "Transport", zh: "交通" },
-    link: "guides/shanghai-metro-guide.html"
+    link: "/guides/shanghai-metro-guide"
   },
   {
     category: "transport",
@@ -60,7 +60,7 @@ const guides = [
     },
     tags: ["Didi", "Taxi", "Airports"],
     meta: { en: "Practical", zh: "实用" },
-    link: "guides/taxis-didi-airport-transfers.html"
+    link: "/guides/taxis-didi-airport-transfers"
   },
   {
     category: "transport",
@@ -72,7 +72,7 @@ const guides = [
     },
     tags: ["Metro", "Didi", "Bikes"],
     meta: { en: "Transport", zh: "交通" },
-    link: "guides/shanghai-transportation/index.html",
+    link: "/guides/shanghai-transportation",
     featured: true
   },
   {
@@ -85,7 +85,7 @@ const guides = [
     },
     tags: ["Jing'an", "Xuhui", "Pudong"],
     meta: { en: "Areas", zh: "区域" },
-    link: "guides/areas-to-live.html",
+    link: "/guides/areas-to-live",
     featured: true
   },
   {
@@ -98,7 +98,7 @@ const guides = [
     },
     tags: ["Groceries", "Delivery", "Shopping"],
     meta: { en: "Daily life", zh: "生活" },
-    link: "guides/foreign-groceries.html",
+    link: "/guides/foreign-groceries",
     featured: true
   },
   {
@@ -111,7 +111,7 @@ const guides = [
     },
     tags: ["Checklist", "SIM", "Banking"],
     meta: { en: "Newcomer checklist", zh: "新手清单" },
-    link: "guides/arrival-checklist/index.html",
+    link: "/guides/arrival-checklist",
     featured: true
   },
   {
@@ -124,7 +124,7 @@ const guides = [
     },
     tags: ["SIM", "VPN", "Internet"],
     meta: { en: "Arrival", zh: "抵达" },
-    link: "guides/sim-cards-internet-access.html"
+    link: "/guides/sim-cards-internet-access"
   },
   {
     category: "daily-life",
@@ -136,7 +136,7 @@ const guides = [
     },
     tags: ["Healthcare", "Safety", "Hospitals"],
     meta: { en: "Safety", zh: "安全" },
-    link: "guides/emergency-contacts-healthcare.html"
+    link: "/guides/emergency-contacts-healthcare"
   }
 ];
 
@@ -150,7 +150,7 @@ const neighbourhoods = [
       zh: "梧桐成荫的小马路、历史建筑、独立咖啡馆，适合喜欢慢节奏、有腔调生活的人。"
     },
     image: "assets/img/street-level/a-view-of-a-city-from-across-the-street--G-d47sb_Wwc.jpg",
-    link: "neighbourhoods/former-french-concession/index.html"
+    link: "/neighbourhoods/former-french-concession"
   },
   {
     zh: "静安",
@@ -161,7 +161,7 @@ const neighbourhoods = [
       zh: "中心地段、成熟公寓、地铁通达，是新人落地上海的稳妥选择。"
     },
     image: "assets/img/street-level/a-city-street-filled-with-lots-of-tall-buildings--7cUSf7_ikY0.jpg",
-    link: "neighbourhoods/jingan/index.html"
+    link: "/neighbourhoods/jingan"
   },
   {
     zh: "徐汇",
@@ -172,7 +172,7 @@ const neighbourhoods = [
       zh: "梧桐街区、国际学校资源丰富，地铁便利，深受家庭租客喜爱。"
     },
     image: "assets/img/street-level/a-city-street-filled-with-lots-of-traffic-and-ta--iyKYXSC2RxE.jpg",
-    link: "guides/areas-to-live.html#area-profiles"
+    link: "/guides/areas-to-live#area-profiles"
   },
   {
     zh: "浦东",
@@ -183,7 +183,7 @@ const neighbourhoods = [
       zh: "商务区、家庭社区与滨江公园，前往浦东机场也更方便。"
     },
     image: "assets/img/homepage-hero/city-skyline-across-body-of-water-during-daytime--paew4TF9M_A.jpg",
-    link: "guides/areas-to-live.html#area-profiles"
+    link: "/guides/areas-to-live#area-profiles"
   },
   {
     zh: "古北",
@@ -194,7 +194,7 @@ const neighbourhoods = [
       zh: "历史悠久的国际化社区，熟悉的超市、餐厅和生活服务一应俱全。"
     },
     image: "assets/img/street-level/a-city-street-with-cars-and-a-tall-building-in-t--OkqTaSYTEFE.jpg",
-    link: "guides/areas-to-live.html#area-profiles"
+    link: "/guides/areas-to-live#area-profiles"
   },
   {
     zh: "虹桥",
@@ -205,7 +205,7 @@ const neighbourhoods = [
       zh: "靠近虹桥机场与火车站，社区安静，深受国际家庭欢迎。"
     },
     image: "assets/img/street-level/cars-on-road-in-between-high-rise-buildings-duri--4I9s1FM6K7I.jpg",
-    link: "guides/areas-to-live.html#area-profiles"
+    link: "/guides/areas-to-live#area-profiles"
   }
 ];
 
@@ -775,7 +775,7 @@ if (searchPanel && searchInput) {
     event.preventDefault();
     searchQuery = searchInput.value.trim();
     renderGuides();
-    document.querySelector("#starter-pack")?.scrollIntoView({ block: "start" });
+    document.querySelector("#featured-guides")?.scrollIntoView({ block: "start" });
   });
 
   searchInput.addEventListener("input", () => {

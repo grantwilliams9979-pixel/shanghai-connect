@@ -20,7 +20,7 @@
     <link rel="alternate" hreflang="en" href="https://shanghai-connect.com/?lang=en" />
     <link rel="alternate" hreflang="zh" href="https://shanghai-connect.com/?lang=zh" />
     <link rel="alternate" hreflang="x-default" href="https://shanghai-connect.com/" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/styles.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -110,9 +110,9 @@
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="#journey" data-i18n="navStartHere">Start Here</a>
         <a href="#featured-guides" data-i18n="navGuides">Guides</a>
-        <a href="guides/essential-apps.html" data-i18n="navApps">Apps</a>
+        <a href="/guides/essential-apps" data-i18n="navApps">Apps</a>
         <a href="#neighbourhoods" data-i18n="navNeighbourhoods">Neighbourhoods</a>
-        <a href="living-in-shanghai/index.html" data-i18n="navLiving">Living in Shanghai</a>
+        <a href="/living-in-shanghai" data-i18n="navLiving">Living in Shanghai</a>
       </nav>
       <button class="language-toggle" type="button" aria-label="Switch language">
         <span data-lang-label>中文</span>
@@ -121,7 +121,7 @@
 
     <main>
       <section class="hero" aria-labelledby="hero-title">
-        <img class="hero-image" src="assets/img/homepage-hero/modern-shanghai-skyline-illuminated-at-night--vxjZOQBR_jg.jpg" alt="Modern Shanghai skyline illuminated at night" />
+        <img class="hero-image" src="/assets/img/homepage-hero/modern-shanghai-skyline-illuminated-at-night--vxjZOQBR_jg.jpg" alt="Modern Shanghai skyline illuminated at night" />
         <div class="hero-scrim"></div>
         <div class="hero-content">
           <p class="eyebrow" data-i18n="eyebrow">Shanghai Starter Pack</p>
@@ -148,7 +148,7 @@
           </form>
           <div class="hero-cta-row">
             <a href="#journey" class="btn btn-primary" data-i18n="heroCtaPrimary">Start Here</a>
-            <a href="#starter-pack" class="btn btn-secondary" data-i18n="heroCtaSecondary">Browse Guides</a>
+            <a href="#featured-guides" class="btn btn-secondary" data-i18n="heroCtaSecondary">Browse Guides</a>
           </div>
           <p class="hero-subtext" data-i18n="heroSubtext">从抵达到安家，上海生活从这里开始。</p>
         </div>
@@ -168,7 +168,7 @@
                 Prepare before you land with essential apps, VPNs, arrival tips, payment setup, and must-know first steps.
               </p>
             </div>
-            <a href="moving-to-shanghai/index.html" class="btn btn-outline" data-i18n="journeyCta1">Prepare for Shanghai</a>
+            <a href="/moving-to-shanghai" class="btn btn-outline" data-i18n="journeyCta1">Prepare for Shanghai</a>
           </article>
           <article class="journey-card journey-card--coral">
             <div>
@@ -178,7 +178,7 @@
                 Get connected, set up payments, use transport, order food, and handle the first few days with confidence.
               </p>
             </div>
-            <a href="guides/arrival-checklist/index.html" class="btn btn-outline" data-i18n="journeyCta2">Start Settling In</a>
+            <a href="/guides/arrival-checklist" class="btn btn-outline" data-i18n="journeyCta2">Start Settling In</a>
           </article>
           <article class="journey-card journey-card--yellow">
             <div>
@@ -188,7 +188,7 @@
                 Explore neighbourhoods, groceries, restaurants, services, events, and communities that make Shanghai feel like home.
               </p>
             </div>
-            <a href="living-in-shanghai/index.html" class="btn btn-outline" data-i18n="journeyCta3">Explore More</a>
+            <a href="/living-in-shanghai" class="btn btn-outline" data-i18n="journeyCta3">Explore More</a>
           </article>
         </div>
       </section>
@@ -202,21 +202,6 @@
         <div class="guide-grid" id="featured-grid" aria-live="polite"></div>
       </section>
 
-      <section class="section section-tight" id="starter-pack" aria-labelledby="starter-title">
-        <div class="section-heading">
-          <p class="eyebrow" data-i18n="browseEyebrow">Browse the essentials</p>
-          <h2 id="starter-title" data-i18n="starterTitle">Everything newcomers ask first</h2>
-        </div>
-        <div class="filter-bar" role="list" aria-label="Guide categories">
-          <button class="filter-chip active" type="button" data-category="all" data-i18n="filterAll">All</button>
-          <button class="filter-chip" type="button" data-category="apps" data-i18n="filterApps">Apps &amp; payments</button>
-          <button class="filter-chip" type="button" data-category="transport" data-i18n="filterTransport">Getting around</button>
-          <button class="filter-chip" type="button" data-category="housing" data-i18n="filterHousing">Where to live</button>
-          <button class="filter-chip" type="button" data-category="daily-life" data-i18n="filterLife">Daily essentials</button>
-        </div>
-        <div class="guide-grid" id="guide-grid" aria-live="polite"></div>
-      </section>
-
       <section class="section section-tight" id="practical-tools" aria-labelledby="tools-title">
         <div class="section-heading">
           <p class="eyebrow" data-i18n="toolsEyebrow">Daily life</p>
@@ -224,31 +209,31 @@
           <p data-i18n="toolsSubtitle">The apps, services, and shortcuts that make Shanghai easier.</p>
         </div>
         <div class="tool-tile-grid">
-          <a class="tool-tile" href="guides/mobile-payments-china-foreigners/index.html">
+          <a class="tool-tile" href="/guides/mobile-payments-china-foreigners">
             <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="2"></rect><line x1="2.5" y1="10" x2="21.5" y2="10"></line></svg>
             <span data-i18n="toolPayments">Payments</span>
           </a>
-          <a class="tool-tile" href="guides/shanghai-transportation/index.html">
+          <a class="tool-tile" href="/guides/shanghai-transportation">
             <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3.5" width="14" height="13" rx="3"></rect><line x1="5" y1="11" x2="19" y2="11"></line><circle cx="8.5" cy="19.5" r="1.4"></circle><circle cx="15.5" cy="19.5" r="1.4"></circle></svg>
             <span data-i18n="toolTransport">Transport</span>
           </a>
-          <a class="tool-tile" href="guides/essential-apps.html#top-10">
+          <a class="tool-tile" href="/guides/essential-apps#top-10">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8L5 8Z"></path><path d="M8.5 8V6a3.5 3.5 0 0 1 7 0v2"></path></svg>
             <span data-i18n="toolFoodDelivery">Food Delivery</span>
           </a>
-          <a class="tool-tile" href="guides/essential-apps.html#top-10">
+          <a class="tool-tile" href="/guides/essential-apps#top-10">
             <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><line x1="3.5" y1="12" x2="20.5" y2="12"></line><path d="M12 3.5c2.6 2.3 4 5.3 4 8.5s-1.4 6.2-4 8.5c-2.6-2.3-4-5.3-4-8.5s1.4-6.2 4-8.5Z"></path></svg>
             <span data-i18n="toolTranslation">Translation</span>
           </a>
-          <a class="tool-tile" href="guides/essential-apps.html#top-10">
+          <a class="tool-tile" href="/guides/essential-apps#top-10">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z"></path><circle cx="12" cy="9.5" r="2.4"></circle></svg>
             <span data-i18n="toolMaps">Maps</span>
           </a>
-          <a class="tool-tile" href="guides/foreign-groceries.html">
+          <a class="tool-tile" href="/guides/foreign-groceries">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 9h15l-1.6 9.2a2 2 0 0 1-2 1.6H8.1a2 2 0 0 1-2-1.6L4.5 9Z"></path><path d="M8 9 10.5 3.5"></path><path d="M16 9 13.5 3.5"></path><line x1="3" y1="9" x2="21" y2="9"></line></svg>
             <span data-i18n="toolGroceries">Groceries</span>
           </a>
-          <a class="tool-tile" href="guides/best-vpns-for-china.html">
+          <a class="tool-tile" href="/guides/best-vpns-for-china">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8 19.5 6v6c0 5-3.2 8.3-7.5 9.4C7.7 20.3 4.5 17 4.5 12V6L12 2.8Z"></path><path d="m9 12 2 2 4-4.2"></path></svg>
             <span data-i18n="toolVpns">VPNs</span>
           </a>
@@ -273,32 +258,32 @@
           <details open>
             <summary data-i18n="faqQ1">What apps do I need before arriving in Shanghai?</summary>
             <p data-i18n="faqA1">Start with WeChat, Alipay, Didi, Baidu Maps, and a translation app. Install and test them before you fly.</p>
-            <a class="text-link" href="guides/essential-apps.html" data-i18n="faqReadGuide">Read the full guide →</a>
+            <a class="text-link" href="/guides/essential-apps" data-i18n="faqReadGuide">Read the full guide →</a>
           </details>
           <details>
             <summary data-i18n="faqQ2">Do I need a VPN in China?</summary>
             <p data-i18n="faqA2">If you rely on overseas services for work, school, travel, or personal accounts, yes. Install and test one before arrival.</p>
-            <a class="text-link" href="guides/best-vpns-for-china.html" data-i18n="faqReadGuide">Read the full guide →</a>
+            <a class="text-link" href="/guides/best-vpns-for-china" data-i18n="faqReadGuide">Read the full guide →</a>
           </details>
           <details>
             <summary data-i18n="faqQ3">Can foreigners use Alipay and WeChat Pay?</summary>
             <p data-i18n="faqA3">Yes. Foreign cards can link to both apps, though verification steps and card limits vary by bank.</p>
-            <a class="text-link" href="guides/mobile-payments-china-foreigners/index.html" data-i18n="faqReadGuide">Read the full guide →</a>
+            <a class="text-link" href="/guides/mobile-payments-china-foreigners" data-i18n="faqReadGuide">Read the full guide →</a>
           </details>
           <details>
             <summary data-i18n="faqQ4">How do I get from Shanghai airport to the city?</summary>
             <p data-i18n="faqA4">From Pudong airport, take the Maglev or Metro Line 2; from Hongqiao, Metro Line 2 or 10 connect straight to the city.</p>
-            <a class="text-link" href="guides/pudong-airport-to-city/index.html" data-i18n="faqReadGuide">Read the full guide →</a>
+            <a class="text-link" href="/guides/pudong-airport-to-city" data-i18n="faqReadGuide">Read the full guide →</a>
           </details>
           <details>
             <summary data-i18n="faqQ5">Which neighbourhood is best for newcomers?</summary>
             <p data-i18n="faqA5">Jing'an is a popular first base for its central location, metro access, and easy day-to-day errands.</p>
-            <a class="text-link" href="guides/areas-to-live.html" data-i18n="faqReadGuide">Read the full guide →</a>
+            <a class="text-link" href="/guides/areas-to-live" data-i18n="faqReadGuide">Read the full guide →</a>
           </details>
           <details>
             <summary data-i18n="faqQ6">Where can I buy foreign groceries in Shanghai?</summary>
             <p data-i18n="faqA6">International supermarkets, specialty importers, and grocery delivery apps all carry familiar imported food.</p>
-            <a class="text-link" href="guides/foreign-groceries.html" data-i18n="faqReadGuide">Read the full guide →</a>
+            <a class="text-link" href="/guides/foreign-groceries" data-i18n="faqReadGuide">Read the full guide →</a>
           </details>
         </div>
       </section>
@@ -331,6 +316,6 @@
       </a>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
   </body>
 </html>

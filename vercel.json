@@ -1,11 +1,66 @@
 {
-  "cleanUrls": false,
+  "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
     {
       "source": "/",
-      "destination": "/coming-soon.html",
+      "destination": "/coming-soon",
       "permanent": false
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*/index.html",
+      "destination": "/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/coming-soon.html",
+      "destination": "/coming-soon",
+      "permanent": true
+    },
+    {
+      "source": "/guides/areas-to-live.html",
+      "destination": "/guides/areas-to-live",
+      "permanent": true
+    },
+    {
+      "source": "/guides/best-vpns-for-china.html",
+      "destination": "/guides/best-vpns-for-china",
+      "permanent": true
+    },
+    {
+      "source": "/guides/emergency-contacts-healthcare.html",
+      "destination": "/guides/emergency-contacts-healthcare",
+      "permanent": true
+    },
+    {
+      "source": "/guides/essential-apps.html",
+      "destination": "/guides/essential-apps",
+      "permanent": true
+    },
+    {
+      "source": "/guides/foreign-groceries.html",
+      "destination": "/guides/foreign-groceries",
+      "permanent": true
+    },
+    {
+      "source": "/guides/shanghai-metro-guide.html",
+      "destination": "/guides/shanghai-metro-guide",
+      "permanent": true
+    },
+    {
+      "source": "/guides/sim-cards-internet-access.html",
+      "destination": "/guides/sim-cards-internet-access",
+      "permanent": true
+    },
+    {
+      "source": "/guides/taxis-didi-airport-transfers.html",
+      "destination": "/guides/taxis-didi-airport-transfers",
+      "permanent": true
     }
   ],
   "headers": [
