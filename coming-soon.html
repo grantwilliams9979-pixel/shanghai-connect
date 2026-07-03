@@ -9,145 +9,157 @@
       content="Shanghai Connect is being refined. A polished bilingual Shanghai starter experience is coming soon."
     />
     <meta name="robots" content="noindex, nofollow" />
-    <meta name="theme-color" content="#0f5a4a" />
+    <meta name="theme-color" content="#0e7c7b" />
     <style>
       :root {
-        --ink: #0f1720;
-        --muted: #465768;
-        --paper: #f4efe5;
-        --accent: #0f5a4a;
-        --accent-soft: #2f9d84;
-        --ring: rgba(15, 90, 74, 0.2);
+        --ink: #263238;
+        --paper: #fffdf8;
+        --green: #0e7c7b;
       }
 
       * {
         box-sizing: border-box;
       }
 
+      html,
+      body {
+        height: 100%;
+      }
+
       body {
         margin: 0;
-        min-height: 100vh;
-        font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
         color: var(--ink);
-        background:
-          radial-gradient(1100px 700px at 88% -10%, rgba(47, 157, 132, 0.22), transparent 70%),
-          radial-gradient(900px 600px at -20% 115%, rgba(15, 90, 74, 0.18), transparent 72%),
-          linear-gradient(160deg, #f9f6ef 0%, #efe6d6 100%);
+        background: var(--paper);
+      }
+
+      .stage {
+        position: relative;
+        min-height: 100svh;
         display: grid;
-        place-items: center;
-        padding: 1.5rem;
+        align-items: end;
+        overflow: hidden;
+        isolation: isolate;
       }
 
-      .panel {
-        width: min(760px, 100%);
-        background: rgba(255, 255, 255, 0.72);
-        border: 1px solid rgba(15, 90, 74, 0.16);
-        border-radius: 24px;
-        backdrop-filter: blur(8px);
-        padding: clamp(1.4rem, 3.5vw, 2.5rem);
-        box-shadow:
-          0 8px 30px rgba(9, 20, 32, 0.1),
-          0 2px 0 rgba(255, 255, 255, 0.7) inset;
+      .stage-image,
+      .stage-scrim {
+        position: absolute;
+        inset: 0;
+        z-index: -2;
       }
 
-      .badge {
+      .stage-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .stage-scrim {
+        z-index: -1;
+        background:
+          linear-gradient(0deg, rgba(9, 14, 17, 0.86) 0%, rgba(9, 14, 17, 0.35) 46%, rgba(9, 14, 17, 0.12) 68%, rgba(9, 14, 17, 0.35) 100%);
+      }
+
+      .brand {
+        position: absolute;
+        top: clamp(20px, 4vw, 40px);
+        left: clamp(20px, 4vw, 56px);
         display: inline-flex;
         align-items: center;
-        gap: 0.55rem;
-        border: 1px solid rgba(15, 90, 74, 0.26);
-        color: var(--accent);
-        background: rgba(15, 90, 74, 0.06);
-        border-radius: 999px;
-        padding: 0.45rem 0.8rem;
-        letter-spacing: 0.08em;
-        font-size: 0.74rem;
-        text-transform: uppercase;
+        gap: 10px;
+        color: white;
+        text-decoration: none;
+        z-index: 1;
       }
 
-      .dot {
-        width: 0.48rem;
-        height: 0.48rem;
-        border-radius: 999px;
-        background: linear-gradient(120deg, var(--accent), var(--accent-soft));
-        box-shadow: 0 0 0 7px var(--ring);
+      .brand-mark {
+        display: grid;
+        place-items: center;
+        width: 38px;
+        height: 38px;
+        border: 1px solid currentColor;
+        border-radius: 50%;
+        font-size: 12px;
+        font-weight: 800;
+      }
+
+      .brand strong {
+        display: block;
+        font-size: 15px;
+      }
+
+      .brand small {
+        display: block;
+        margin-top: 1px;
+        font-size: 12px;
+        opacity: 0.72;
+      }
+
+      .content {
+        width: min(700px, 100%);
+        padding: 0 clamp(20px, 5vw, 72px) clamp(56px, 8vw, 96px);
+        color: white;
       }
 
       h1 {
-        margin: 1rem 0 0.6rem;
-        font-size: clamp(2rem, 6vw, 4rem);
-        line-height: 0.98;
-        letter-spacing: -0.02em;
+        margin: 0 0 18px;
+        font-size: clamp(2.4rem, 6vw, 4.4rem);
+        line-height: 1.02;
+        letter-spacing: -0.01em;
       }
 
       p {
         margin: 0;
-        font-size: clamp(1rem, 2.2vw, 1.18rem);
-        color: var(--muted);
-        max-width: 60ch;
-      }
-
-      .divider {
-        margin: 1.5rem 0 1.2rem;
-        border: none;
-        height: 1px;
-        background: linear-gradient(90deg, transparent, rgba(15, 90, 74, 0.25), transparent);
-      }
-
-      .meta {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.8rem;
-        font-size: 0.92rem;
-      }
-
-      .chip {
-        border: 1px solid rgba(15, 90, 74, 0.2);
-        border-radius: 999px;
-        padding: 0.42rem 0.7rem;
-        color: #294454;
-        background: rgba(255, 255, 255, 0.74);
+        max-width: 52ch;
+        font-size: clamp(1rem, 2vw, 1.15rem);
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.86);
       }
 
       .home-link {
-        display: inline-block;
-        margin-top: 1.6rem;
-        color: var(--accent);
+        display: inline-flex;
+        align-items: center;
+        margin-top: 28px;
+        color: rgba(255, 255, 255, 0.82);
+        font-size: 14px;
+        font-weight: 600;
         text-decoration: none;
-        border-bottom: 1px solid rgba(15, 90, 74, 0.35);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+        padding-bottom: 2px;
+        transition: color 150ms ease, border-color 150ms ease;
       }
 
       .home-link:hover {
-        border-bottom-color: var(--accent);
-      }
-
-      @media (max-width: 640px) {
-        .panel {
-          border-radius: 20px;
-        }
+        color: white;
+        border-color: white;
       }
     </style>
   </head>
   <body>
-    <main class="panel" aria-labelledby="coming-soon-title">
-      <span class="badge">
-        <span class="dot" aria-hidden="true"></span>
-        Temporary holding page
-      </span>
+    <main class="stage" aria-labelledby="coming-soon-title">
+      <img
+        class="stage-image"
+        src="assets/img/homepage-hero/shanghai-s-skyline-stands-tall-at-dusk--_klbOmCI05I.jpg"
+        alt="The Oriental Pearl Tower and Lujiazui skyline at dusk in Shanghai"
+      />
+      <div class="stage-scrim" aria-hidden="true"></div>
 
-      <h1 id="coming-soon-title">Shanghai Connect is coming soon.</h1>
-      <p>
-        We are actively refining the experience and content structure so the launch is faster, clearer, and more useful for newcomers to Shanghai.
-      </p>
+      <a class="brand" href="/index.html" aria-label="Shanghai Connect home">
+        <span class="brand-mark">SC</span>
+        <span>
+          <strong>Shanghai Connect</strong>
+          <small>上海指南</small>
+        </span>
+      </a>
 
-      <hr class="divider" />
-
-      <div class="meta" aria-label="Status">
-        <span class="chip">Bilingual UX tuning</span>
-        <span class="chip">Guide quality pass</span>
-        <span class="chip">Performance polish</span>
+      <div class="content">
+        <h1 id="coming-soon-title">Shanghai Connect is almost here.</h1>
+        <p>
+          We're refining a bilingual starter guide to help newcomers arrive, settle in, and live confidently in Shanghai. Launching soon.
+        </p>
+        <a class="home-link" href="/index.html">Preview the current build →</a>
       </div>
-
-      <a class="home-link" href="/index.html">Preview current build</a>
     </main>
   </body>
 </html>
