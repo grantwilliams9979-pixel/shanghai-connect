@@ -9,19 +9,34 @@ const guides = [
     },
     tags: ["Alipay", "WeChat", "Didi"],
     meta: { en: "Starter guide", zh: "入门指南" },
-    link: "guides/essential-apps.html"
+    link: "guides/essential-apps.html",
+    featured: true
   },
   {
     category: "apps",
     image: "assets/img/apps/man-using-turned-on-smartphone--HjSdOirGJu8.jpg",
-    title: { en: "How to use Alipay", zh: "如何使用支付宝" },
+    title: { en: "Alipay & WeChat Pay guide", zh: "支付宝与微信支付指南" },
     summary: {
-      en: "Link cards, verify your account, pay in shops, ride the metro, and understand common foreign-card limits.",
-      zh: "绑定银行卡、完成认证、线下支付、乘坐地铁，并了解境外卡常见限制。"
+      en: "Link cards, verify your account, and use Alipay and WeChat Pay for shops, metro rides, and everyday payments.",
+      zh: "绑定银行卡、完成身份验证，并学会用支付宝和微信支付进行购物、乘坐地铁和日常消费。"
     },
-    tags: ["Payments", "Setup", "Metro"],
+    tags: ["Alipay", "WeChat Pay", "Payments"],
     meta: { en: "Must know", zh: "必读" },
-    link: "guides/how-to-use-alipay-in-china/"
+    link: "guides/mobile-payments-china-foreigners/index.html",
+    featured: true
+  },
+  {
+    category: "apps",
+    image: "assets/img/vpn/woman-working-on-laptop-at-outdoor-cafe-table--gwRhv5Pv9zI.jpg",
+    title: { en: "Best VPNs for China", zh: "中国最佳 VPN 推荐" },
+    summary: {
+      en: "Compare newcomer-friendly VPN providers, understand the tradeoffs, and test your VPN before you fly.",
+      zh: "比较适合新人的 VPN 服务，了解各自的优劣，并在出发前完成测试。"
+    },
+    tags: ["VPN", "Setup", "Internet"],
+    meta: { en: "Before you fly", zh: "出发前" },
+    link: "guides/best-vpns-for-china.html",
+    featured: true
   },
   {
     category: "transport",
@@ -48,6 +63,19 @@ const guides = [
     link: "guides/taxis-didi-airport-transfers.html"
   },
   {
+    category: "transport",
+    image: "assets/img/transportation/a-train-on-a-bridge--GsS7XrXMVpI.jpg",
+    title: { en: "Getting around Shanghai", zh: "上海出行指南" },
+    summary: {
+      en: "Metro, taxis, Didi, high-speed rail, airports, bike sharing, buses, and walking, all in one transport hub.",
+      zh: "地铁、出租车、滴滴、高铁、机场、共享单车和公交车，一站式出行指南。"
+    },
+    tags: ["Metro", "Didi", "Bikes"],
+    meta: { en: "Transport", zh: "交通" },
+    link: "guides/shanghai-transportation/index.html",
+    featured: true
+  },
+  {
     category: "housing",
     image: "assets/img/street-level/a-view-of-a-city-from-across-the-street--G-d47sb_Wwc.jpg",
     title: { en: "Where to live in Shanghai", zh: "上海居住区域选择" },
@@ -57,7 +85,8 @@ const guides = [
     },
     tags: ["Jing'an", "Xuhui", "Pudong"],
     meta: { en: "Areas", zh: "区域" },
-    link: "guides/areas-to-live.html"
+    link: "guides/areas-to-live.html",
+    featured: true
   },
   {
     category: "daily-life",
@@ -69,7 +98,21 @@ const guides = [
     },
     tags: ["Groceries", "Delivery", "Shopping"],
     meta: { en: "Daily life", zh: "生活" },
-    link: "guides/foreign-groceries.html"
+    link: "guides/foreign-groceries.html",
+    featured: true
+  },
+  {
+    category: "daily-life",
+    image: "assets/img/arrival/a-group-of-people-watching-a-plane-take-off--bGKpfsi-bAs.jpg",
+    title: { en: "Shanghai arrival checklist", zh: "上海抵达清单" },
+    summary: {
+      en: "SIM cards, apps, payments, and banking, organized into a clear before-arrival and on-arrival checklist.",
+      zh: "手机卡、应用、支付和银行开户，整理成清晰的抵达前与抵达后清单。"
+    },
+    tags: ["Checklist", "SIM", "Banking"],
+    meta: { en: "Newcomer checklist", zh: "新手清单" },
+    link: "guides/arrival-checklist/index.html",
+    featured: true
   },
   {
     category: "daily-life",
@@ -97,20 +140,94 @@ const guides = [
   }
 ];
 
+const neighbourhoods = [
+  {
+    zh: "法租界",
+    name: { en: "Former French Concession", zh: "法租界" },
+    bestFor: { en: "Best for: leafy streets & cafes", zh: "适合：梧桐街区与咖啡馆" },
+    summary: {
+      en: "Tree-lined lanes, heritage architecture, independent cafes, and a walkable, character-filled base.",
+      zh: "梧桐成荫的小马路、历史建筑、独立咖啡馆，适合喜欢慢节奏、有腔调生活的人。"
+    },
+    image: "assets/img/street-level/a-view-of-a-city-from-across-the-street--G-d47sb_Wwc.jpg",
+    link: "neighbourhoods/former-french-concession/index.html"
+  },
+  {
+    zh: "静安",
+    name: { en: "Jing'an", zh: "静安" },
+    bestFor: { en: "Best for: first-time arrivals", zh: "适合：初到上海的人" },
+    summary: {
+      en: "Central, polished, and convenient, with strong metro access and an easy landing for newcomers.",
+      zh: "中心地段、成熟公寓、地铁通达，是新人落地上海的稳妥选择。"
+    },
+    image: "assets/img/street-level/a-city-street-filled-with-lots-of-tall-buildings--7cUSf7_ikY0.jpg",
+    link: "neighbourhoods/jingan/index.html"
+  },
+  {
+    zh: "徐汇",
+    name: { en: "Xuhui", zh: "徐汇" },
+    bestFor: { en: "Best for: families & schools", zh: "适合：家庭与学校资源" },
+    summary: {
+      en: "Leafy streets, international schools, and easy metro access make Xuhui a favourite for families.",
+      zh: "梧桐街区、国际学校资源丰富，地铁便利，深受家庭租客喜爱。"
+    },
+    image: "assets/img/street-level/a-city-street-filled-with-lots-of-traffic-and-ta--iyKYXSC2RxE.jpg",
+    link: "guides/areas-to-live.html#area-profiles"
+  },
+  {
+    zh: "浦东",
+    name: { en: "Pudong", zh: "浦东" },
+    bestFor: { en: "Best for: business & airport access", zh: "适合：商务与机场通勤" },
+    summary: {
+      en: "Business districts, family compounds, riverside parks, and the easiest link to Pudong airport.",
+      zh: "商务区、家庭社区与滨江公园，前往浦东机场也更方便。"
+    },
+    image: "assets/img/homepage-hero/city-skyline-across-body-of-water-during-daytime--paew4TF9M_A.jpg",
+    link: "guides/areas-to-live.html#area-profiles"
+  },
+  {
+    zh: "古北",
+    name: { en: "Gubei", zh: "古北" },
+    bestFor: { en: "Best for: international community", zh: "适合：国际化社区氛围" },
+    summary: {
+      en: "A long-established international enclave with familiar supermarkets, restaurants, and services.",
+      zh: "历史悠久的国际化社区，熟悉的超市、餐厅和生活服务一应俱全。"
+    },
+    image: "assets/img/street-level/a-city-street-with-cars-and-a-tall-building-in-t--OkqTaSYTEFE.jpg",
+    link: "guides/areas-to-live.html#area-profiles"
+  },
+  {
+    zh: "虹桥",
+    name: { en: "Hongqiao", zh: "虹桥" },
+    bestFor: { en: "Best for: transport hub access", zh: "适合：交通枢纽通达" },
+    summary: {
+      en: "Quieter compounds close to Hongqiao airport and rail station, popular with international families.",
+      zh: "靠近虹桥机场与火车站，社区安静，深受国际家庭欢迎。"
+    },
+    image: "assets/img/street-level/cars-on-road-in-between-high-rise-buildings-duri--4I9s1FM6K7I.jpg",
+    link: "guides/areas-to-live.html#area-profiles"
+  }
+];
+
 const copy = {
   en: {
+    navStartHere: "Start Here",
     navGuides: "Guides",
-    navApps: "Essential apps",
+    navApps: "Apps",
+    navNeighbourhoods: "Neighbourhoods",
+    navLiving: "Living in Shanghai",
     navAreas: "Areas",
     navPlan: "First week",
     crumbHome: "Home",
     crumbApps: "Essential apps",
     eyebrow: "Shanghai Starter Pack",
-    heroTitle: "Shanghai starts here.",
-    heroCopy:
-      "A bilingual digital concierge for the apps, neighbourhoods, transport, groceries, and must-know steps that make Shanghai easier from day one.",
+    heroTitle: "Your Shanghai Starter Guide",
+    heroCopy: "Practical, bilingual guides to help you arrive, settle in, and live confidently in Shanghai.",
+    heroSubtext: "从抵达到安家，上海生活从这里开始。",
     searchLabel: "Search guides",
-    searchPlaceholder: "Try Alipay, metro, SIM card, Jing'an",
+    searchPlaceholder: "Search apps, neighbourhoods, transport, groceries, VPNs...",
+    heroCtaPrimary: "Start Here",
+    heroCtaSecondary: "Browse Guides",
     browseEyebrow: "Browse the essentials",
     starterTitle: "Everything newcomers ask first",
     filterAll: "All",
@@ -118,31 +235,58 @@ const copy = {
     filterTransport: "Getting around",
     filterHousing: "Where to live",
     filterLife: "Daily essentials",
-    appsCtaKicker: "Flagship guide",
-    appsCtaTitle: "Essential apps starter guide",
-    appsCtaCopy: "A focused 48-hour, first-week, and first-month app setup sequence for newcomers.",
-    appsCtaButton: "Open guide",
-    planEyebrow: "First week in Shanghai",
-    planTitle: "A calmer arrival checklist",
-    planCopy:
-      "Shanghai Connect organizes practical decisions in the order people actually face them: get connected, pay for things, move around, settle in, then start exploring.",
-    stepOneTitle: "Set up payments",
-    stepOneCopy: "Alipay, WeChat Pay, cards, and common verification issues.",
-    stepTwoTitle: "Get moving",
-    stepTwoCopy: "Metro, Didi, airport transfers, train stations, and maps.",
-    stepThreeTitle: "Find your rhythm",
-    stepThreeCopy: "Groceries, healthcare, neighbourhoods, air quality, and daily basics.",
-    areasEyebrow: "Neighbourhood finder",
-    areasTitle: "Where Shanghai starts to feel like home",
-    viewGuides: "View guides",
-    viewAreasGuide: "View area guide",
-    jingAn: "Central, polished, convenient, and great for first-time arrivals.",
-    xuhui: "Leafy streets, cafes, schools, and easy metro access.",
-    pudong: "Business districts, family compounds, parks, and airport access.",
+    journeyEyebrow: "Where are you in your journey?",
+    journeyTitle: "Prepare, arrive, settle, explore",
+    journeyStep1: "01",
+    journeyTitle1: "Travelling to Shanghai Soon",
+    journeyCopy1: "Prepare before you land with essential apps, VPNs, arrival tips, payment setup, and must-know first steps.",
+    journeyCta1: "Prepare for Shanghai",
+    journeyStep2: "02",
+    journeyTitle2: "Just Arrived",
+    journeyCopy2: "Get connected, set up payments, use transport, order food, and handle the first few days with confidence.",
+    journeyCta2: "Start Settling In",
+    journeyStep3: "03",
+    journeyTitle3: "Already Settled",
+    journeyCopy3: "Explore neighbourhoods, groceries, restaurants, services, events, and communities that make Shanghai feel like home.",
+    journeyCta3: "Explore More",
+    featuredEyebrow: "Featured guides",
+    featuredTitle: "Featured Guides",
+    featuredSubtitle: "Start with the guides newcomers use most.",
+    readGuide: "Read guide →",
+    toolsEyebrow: "Daily life",
+    toolsTitle: "Practical Tools for Daily Life",
+    toolsSubtitle: "The apps, services, and shortcuts that make Shanghai easier.",
+    toolPayments: "Payments",
+    toolTransport: "Transport",
+    toolFoodDelivery: "Food Delivery",
+    toolTranslation: "Translation",
+    toolMaps: "Maps",
+    toolGroceries: "Groceries",
+    toolVpns: "VPNs",
+    neighEyebrow: "Neighbourhood finder",
+    neighTitle: "Find Your Area in Shanghai",
+    neighSubtitle: "Explore neighbourhoods based on lifestyle, convenience, budget, and community.",
+    faqEyebrow: "FAQ",
+    faqTitle: "Popular Questions About Moving to Shanghai",
+    faqQ1: "What apps do I need before arriving in Shanghai?",
+    faqA1: "Start with WeChat, Alipay, Didi, Baidu Maps, and a translation app. Install and test them before you fly.",
+    faqQ2: "Do I need a VPN in China?",
+    faqA2: "If you rely on overseas services for work, school, travel, or personal accounts, yes. Install and test one before arrival.",
+    faqQ3: "Can foreigners use Alipay and WeChat Pay?",
+    faqA3: "Yes. Foreign cards can link to both apps, though verification steps and card limits vary by bank.",
+    faqQ4: "How do I get from Shanghai airport to the city?",
+    faqA4: "From Pudong airport, take the Maglev or Metro Line 2; from Hongqiao, Metro Line 2 or 10 connect straight to the city.",
+    faqQ5: "Which neighbourhood is best for newcomers?",
+    faqA5: "Jing'an is a popular first base for its central location, metro access, and easy day-to-day errands.",
+    faqQ6: "Where can I buy foreign groceries in Shanghai?",
+    faqA6: "International supermarkets, specialty importers, and grocery delivery apps all carry familiar imported food.",
+    faqReadGuide: "Read the full guide →",
     newsletterEyebrow: "Launch updates",
-    newsletterTitle: "Get the next Shanghai guide drop",
+    newsletterTitle: "Make Shanghai Easier to Navigate",
+    newsletterCopy: "Get practical guides, local tips, app recommendations, and newcomer resources straight to your inbox.",
+    newsletterSecondaryCta: "Explore the Starter Pack",
     emailPlaceholder: "Email address",
-    joinButton: "Join",
+    joinButton: "Join Shanghai Connect",
     footerPlan: "Product plan",
     footerGuides: "Starter Pack",
     noResults: "No guides found. Try another search or category.",
@@ -287,25 +431,26 @@ const copy = {
       "Ask about lease terms, fapiao needs, residence registration support, utilities, repairs, and agent fees.",
     areasSourcesCopy:
       "This guide uses Shanghai Connect's source map for neighbourhood scope and cross-checks newcomer themes against expat accommodation guidance. It is a practical shortlist, not a rent-price database.",
-    areasOfficialSource: "Accommodation guide reference",
-    heroStartCta: "New to Shanghai? Start here →",
-    stageSelectorLabel: "Where are you in your journey?",
-    stageArriving: "Arriving soon",
-    stageJustArrived: "Just arrived",
-    stageSettlingIn: "Getting settled"
+    areasOfficialSource: "Accommodation guide reference"
   },
   zh: {
+    navStartHere: "从这里开始",
     navGuides: "指南",
-    navApps: "必备应用",
+    navApps: "应用",
+    navNeighbourhoods: "居住区域",
+    navLiving: "上海生活",
     navAreas: "区域",
     navPlan: "第一周",
     crumbHome: "首页",
     crumbApps: "必备应用",
     eyebrow: "上海入门包",
-    heroTitle: "从这里开始上海生活。",
-    heroCopy: "双语城市生活指南，帮你快速搞定应用、居住区域、交通、超市和抵达后的关键事项。",
+    heroTitle: "你的上海入门指南",
+    heroCopy: "双语实用指南，帮助你顺利抵达、安顿并自信地生活在上海。",
+    heroSubtext: "From arrival to settling in, your Shanghai life starts here.",
     searchLabel: "搜索指南",
-    searchPlaceholder: "试试 支付宝、地铁、手机卡、静安",
+    searchPlaceholder: "搜索应用、居住区域、交通、超市、VPN...",
+    heroCtaPrimary: "从这里开始",
+    heroCtaSecondary: "浏览指南",
     browseEyebrow: "浏览重点内容",
     starterTitle: "新来上海最常问的问题",
     filterAll: "全部",
@@ -313,32 +458,37 @@ const copy = {
     filterTransport: "出行交通",
     filterHousing: "居住区域",
     filterLife: "日常必备",
-    appsCtaKicker: "重点指南",
-    appsCtaTitle: "上海必备应用入门指南",
-    appsCtaCopy: "按抵达 48 小时、第一周和第一个月整理的新手应用设置顺序。",
-    appsCtaButton: "打开指南",
-    planEyebrow: "抵达上海第一周",
-    planTitle: "更从容的落地清单",
-    planCopy: "Shanghai Connect 按真实生活顺序整理信息：先联网和支付，再解决交通、居住与日常探索。",
-    stepOneTitle: "设置支付",
-    stepOneCopy: "支付宝、微信支付、银行卡和常见认证问题。",
-    stepTwoTitle: "开始出行",
-    stepTwoCopy: "地铁、滴滴、机场交通、火车站和地图应用。",
-    stepThreeTitle: "进入节奏",
-    stepThreeCopy: "超市、医疗、居住区域、空气质量和生活基础。",
-    areasEyebrow: "居住区域",
-    areasTitle: "找到更像家的上海",
-    viewGuides: "查看指南",
-    viewAreasGuide: "查看区域指南",
-    jingAn: "中心、精致、便利，适合初到上海的人。",
-    xuhui: "梧桐街区、咖啡馆、学校和便捷地铁。",
-    pudong: "商务区、家庭社区、公园和机场通达性。",
-    newsletterEyebrow: "上线更新",
-    newsletterTitle: "获取下一批上海指南",
-    emailPlaceholder: "邮箱地址",
-    joinButton: "加入",
-    footerPlan: "产品计划",
-    footerGuides: "入门包",
+    journeyEyebrow: "你现在在哪个阶段？",
+    journeyTitle: "准备、抵达、安顿、探索",
+    journeyStep1: "01",
+    journeyTitle1: "即将前往上海",
+    journeyCopy1: "抵达前做好准备：必备应用、VPN、抵达提示、支付设置和关键的第一步。",
+    journeyCta1: "开始准备上海生活",
+    journeyStep2: "02",
+    journeyTitle2: "刚刚抵达",
+    journeyCopy2: "联网、设置支付、使用交通、点外卖，从容应对最初几天。",
+    journeyCta2: "开始安顿生活",
+    journeyStep3: "03",
+    journeyTitle3: "已经安顿",
+    journeyCopy3: "探索让上海更像家的居住区域、超市、餐厅、服务、活动和社区。",
+    journeyCta3: "探索更多",
+    featuredEyebrow: "精选指南",
+    featuredTitle: "精选指南",
+    featuredSubtitle: "从新人最常用的指南开始。",
+    readGuide: "查看指南 →",
+    toolsEyebrow: "日常生活",
+    toolsTitle: "日常生活实用工具",
+    toolsSubtitle: "让上海生活更轻松的应用、服务和小技巧。",
+    toolPayments: "支付",
+    toolTransport: "交通",
+    toolFoodDelivery: "外卖",
+    toolTranslation: "翻译",
+    toolMaps: "地图",
+    toolGroceries: "超市",
+    toolVpns: "VPN",
+    neighEyebrow: "居住区域",
+    neighTitle: "找到你在上海的区域",
+    neighSubtitle: "按生活方式、便利性、预算和社区氛围探索居住区域。",
     noResults: "没有找到相关指南。请换个关键词或分类。",
     appsEyebrow: "必备应用入门指南",
     appsHeroTitle: "先把这些上海应用设置好。",
@@ -462,11 +612,29 @@ const copy = {
     areasSourcesCopy:
       "本指南使用 Shanghai Connect 来源地图确定区域范围，并参考外籍人士住宿指南中的新人常见关注点。这是实用精选清单，不是租金价格数据库。",
     areasOfficialSource: "住宿指南参考",
-    heroStartCta: "初来上海？从这里开始 →",
-    stageSelectorLabel: "你现在在哪个阶段？",
-    stageArriving: "即将抵达",
-    stageJustArrived: "刚刚到达",
-    stageSettlingIn: "正在安顿"
+    faqEyebrow: "常见问题",
+    faqTitle: "关于搬到上海的常见问题",
+    faqQ1: "抵达上海前需要安装哪些应用？",
+    faqA1: "先安装微信、支付宝、滴滴、百度地图和一个翻译应用，并在出发前测试好。",
+    faqQ2: "在中国需要使用 VPN 吗？",
+    faqA2: "如果你的工作、学习、旅行或个人账号依赖海外服务，答案是需要，建议抵达前安装并测试。",
+    faqQ3: "外国人可以使用支付宝和微信支付吗？",
+    faqA3: "可以。境外银行卡可以绑定这两款应用，但具体认证流程和额度会因发卡行而异。",
+    faqQ4: "从上海机场怎么进城？",
+    faqA4: "从浦东机场可乘磁悬浮或地铁 2 号线；从虹桥机场可乘地铁 2 号线或 10 号线直达市区。",
+    faqQ5: "哪个区域最适合新来的人？",
+    faqA5: "静安因地理位置居中、地铁通达、日常办事方便，是很受新人欢迎的第一站。",
+    faqQ6: "在上海哪里可以买到进口食品？",
+    faqA6: "国际超市、进口食品专营店和生鲜外卖应用都能买到熟悉的进口食品。",
+    faqReadGuide: "查看完整指南 →",
+    newsletterEyebrow: "上线更新",
+    newsletterTitle: "让上海生活更容易上手",
+    newsletterCopy: "获取实用指南、本地贴士、应用推荐和新人资源，直接发送到你的邮箱。",
+    newsletterSecondaryCta: "浏览入门包",
+    emailPlaceholder: "邮箱地址",
+    joinButton: "加入 Shanghai Connect",
+    footerPlan: "产品计划",
+    footerGuides: "入门包"
   }
 };
 
@@ -475,6 +643,8 @@ let activeCategory = "all";
 let searchQuery = "";
 
 const grid = document.querySelector("#guide-grid");
+const featuredGrid = document.querySelector("#featured-grid");
+const neighbourhoodGrid = document.querySelector("#neighbourhood-grid");
 const searchInput = document.querySelector("#guide-search");
 const languageToggle = document.querySelector(".language-toggle");
 const header = document.querySelector(".site-header");
@@ -517,6 +687,42 @@ function guideMatches(guide) {
   return inCategory && haystack.includes(searchQuery.toLowerCase());
 }
 
+function guideCardHTML(guide) {
+  return `
+    <article class="guide-card">
+      ${guide.link ? `<a href="${guide.link}" class="guide-card-link" aria-label="${guide.title[locale]}"></a>` : ""}
+      ${guide.image ? `<img class="guide-card-img" src="${guide.image}" alt="${guide.title[locale]}" loading="lazy" />` : ""}
+      <div>
+        <span class="card-kicker">${guide.meta[locale]}</span>
+        <h3>${guide.title[locale]}</h3>
+        <p>${guide.summary[locale]}</p>
+      </div>
+      <div class="card-tags">
+        ${guide.tags.map((tag) => `<span>${tag}</span>`).join("")}
+      </div>
+      <span class="card-link-label">${copy[locale].readGuide}</span>
+    </article>
+  `;
+}
+
+function neighbourhoodCardHTML(area) {
+  return `
+    <article class="guide-card">
+      <a href="${area.link}" class="guide-card-link" aria-label="${area.name[locale]}"></a>
+      <img class="guide-card-img" src="${area.image}" alt="${area.name.en} street scene" loading="lazy" />
+      <div>
+        <span class="card-kicker">${area.bestFor[locale]}</span>
+        <h3>${area.name[locale]}</h3>
+        <p>${area.summary[locale]}</p>
+      </div>
+      <div class="card-tags">
+        <span>${area.zh}</span>
+      </div>
+      <span class="card-link-label">${copy[locale].readGuide}</span>
+    </article>
+  `;
+}
+
 function renderGuides() {
   if (!grid) {
     return;
@@ -529,24 +735,26 @@ function renderGuides() {
     return;
   }
 
-  grid.innerHTML = visibleGuides
-    .map(
-      (guide) => `
-        <article class="guide-card">
-          ${guide.link ? `<a href="${guide.link}" class="guide-card-link" aria-label="${guide.title[locale]}"></a>` : ""}
-          ${guide.image ? `<img class="guide-card-img" src="${guide.image}" alt="${guide.title[locale]}" loading="lazy" />` : ""}
-          <div>
-            <span class="card-kicker">${guide.meta[locale]}</span>
-            <h3>${guide.title[locale]}</h3>
-            <p>${guide.summary[locale]}</p>
-          </div>
-          <div class="card-tags">
-            ${guide.tags.map((tag) => `<span>${tag}</span>`).join("")}
-          </div>
-        </article>
-      `
-    )
+  grid.innerHTML = visibleGuides.map(guideCardHTML).join("");
+}
+
+function renderFeaturedGuides() {
+  if (!featuredGrid) {
+    return;
+  }
+
+  featuredGrid.innerHTML = guides
+    .filter((guide) => guide.featured)
+    .map(guideCardHTML)
     .join("");
+}
+
+function renderNeighbourhoods() {
+  if (!neighbourhoodGrid) {
+    return;
+  }
+
+  neighbourhoodGrid.innerHTML = neighbourhoods.map(neighbourhoodCardHTML).join("");
 }
 
 function setCategory(category) {
@@ -581,6 +789,8 @@ if (languageToggle) {
     locale = locale === "en" ? "zh" : "en";
     updateCopy();
     renderGuides();
+    renderFeaturedGuides();
+    renderNeighbourhoods();
   });
 }
 
@@ -625,4 +835,6 @@ document.querySelectorAll("a[href^='?category=']").forEach((link) => {
 
 updateCopy();
 renderGuides();
+renderFeaturedGuides();
+renderNeighbourhoods();
 updateHeader();
