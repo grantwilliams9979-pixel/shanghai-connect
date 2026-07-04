@@ -425,6 +425,18 @@ Accessibility:
 - Alt text required for editorial images.
 - Avoid hiding critical content inside hover-only UI.
 
+Design inspiration (original design, inspired by the UX and structure of these platforms):
+
+- [Lonely Planet](https://www.lonelyplanet.com/) — destination guides, editorial storytelling, search experience, category navigation, featured guides, travel-focused content structure.
+- [Apple](https://www.apple.com/) — premium design, whitespace, typography, visual hierarchy, simplicity, clean user interface.
+- [Notion](https://www.notion.so/) — knowledge-base structure, documentation-style guides, callout boxes, internal linking, readability, simple navigation.
+- [Airbnb](https://www.airbnb.com/) — search experience, filter chips, mobile-first design, cards, sticky navigation, discovery-focused browsing.
+- [Google Travel](https://www.google.com/travel/) — location-based discovery, map integration, nearby recommendations, trip-planning structure, geographic browsing.
+- [Time Out](https://www.timeout.com/) — editorial guides, local recommendations, best-of articles, seasonal collections, events and city discovery.
+- [HappyCow](https://www.happycow.net/) — future restaurant listings: listing cards, filters, maps, restaurant detail pages, photo galleries.
+- [Atlas Obscura](https://www.atlasobscura.com/) — storytelling, hidden gems, local context, unique experiences, editorial personality.
+- [Spotted by Locals](https://www.spottedbylocals.com/) — authentic recommendations, insider knowledge, local voices, curated discovery, personal writing style.
+
 ## 15. SEO Plan
 
 Technical SEO:
