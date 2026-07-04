@@ -78,6 +78,26 @@ input {
   border-color: var(--line);
 }
 
+/* Pages with a full-bleed photo hero keep the homepage's light-on-image
+   header until the user scrolls and the header elevates. */
+.guide-page--photo-hero .site-header {
+  color: white;
+}
+
+.guide-page--photo-hero .site-header[data-elevated="true"] {
+  color: var(--ink);
+}
+
+.guide-page--photo-hero .site-header .language-toggle {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.guide-page--photo-hero .site-header[data-elevated="true"] .language-toggle {
+  background: var(--surface);
+  border-color: var(--line);
+}
+
 .brand {
   display: inline-flex;
   align-items: center;
@@ -925,31 +945,60 @@ h2 {
   margin-top: 26px;
 }
 
-.guide-hero-inner--media {
+.guide-hero--media {
+  position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(300px, 400px);
-  gap: clamp(30px, 4.5vw, 64px);
-  align-items: center;
+  align-items: end;
+  min-height: 52svh;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.guide-hero--media .breadcrumbs {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.guide-hero--media .eyebrow {
+  color: #ffd8be;
+}
+
+.guide-hero--media h1 {
+  color: white;
+}
+
+.guide-hero--media .hero-copy {
+  color: rgba(255, 255, 255, 0.88);
 }
 
 .guide-hero-media {
+  position: absolute;
+  inset: 0;
   margin: 0;
+  z-index: -2;
 }
 
 .guide-hero-media img {
-  display: block;
   width: 100%;
-  height: auto;
-  aspect-ratio: 4 / 3;
+  height: 100%;
   object-fit: cover;
-  border-radius: 8px;
-  box-shadow: var(--shadow);
+}
+
+.guide-hero-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.24) 54%, rgba(0, 0, 0, 0.08)),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.28), transparent 46%);
 }
 
 .guide-hero-media figcaption {
-  margin-top: 10px;
-  color: var(--muted);
-  font-size: 12px;
+  position: absolute;
+  right: 14px;
+  bottom: 10px;
+  z-index: 1;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 11px;
   line-height: 1.5;
 }
 
@@ -1627,11 +1676,6 @@ h2 {
   .hero {
     min-height: 78svh;
     padding-top: 96px;
-  }
-
-  .guide-hero-inner--media {
-    grid-template-columns: 1fr;
-    gap: 34px;
   }
 
   .guide-grid,
