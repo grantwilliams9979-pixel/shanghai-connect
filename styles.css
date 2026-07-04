@@ -828,11 +828,19 @@ h2 {
 }
 
 .guide-hero h1 {
+  max-width: 860px;
   color: var(--ink);
+  font-size: clamp(38px, 5.5vw, 64px);
+  line-height: 1.02;
 }
 
 .guide-hero .hero-copy {
   color: var(--muted);
+  font-size: clamp(17px, 1.8vw, 20px);
+}
+
+.guide-hero .guide-actions {
+  margin-top: 26px;
 }
 
 .breadcrumbs {
@@ -983,7 +991,8 @@ h2 {
 }
 
 .vpn-feature,
-.recommendation-box {
+.recommendation-box,
+.page-cta {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 24px;
@@ -995,17 +1004,20 @@ h2 {
 }
 
 .vpn-feature .eyebrow,
-.recommendation-box .eyebrow {
+.recommendation-box .eyebrow,
+.page-cta .eyebrow {
   color: #f4c08f;
 }
 
 .vpn-feature h2,
-.recommendation-box h2 {
+.recommendation-box h2,
+.page-cta h2 {
   font-size: clamp(28px, 3vw, 42px);
 }
 
 .vpn-feature p,
-.recommendation-box p {
+.recommendation-box p,
+.page-cta p {
   margin: 14px 0 0;
   max-width: 780px;
   color: rgba(255, 255, 255, 0.76);
@@ -1014,7 +1026,8 @@ h2 {
 
 .vpn-feature a,
 .provider-button,
-.recommendation-actions a {
+.recommendation-actions a,
+.cta-actions a {
   display: inline-flex;
   min-height: 44px;
   align-items: center;
@@ -1262,17 +1275,20 @@ h2 {
   font-weight: 850;
 }
 
-.recommendation-box {
+.recommendation-box,
+.page-cta {
   margin-bottom: 82px;
 }
 
-.recommendation-actions {
+.recommendation-actions,
+.cta-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 
-.recommendation-actions a {
+.recommendation-actions a,
+.cta-actions a {
   min-width: 120px;
   padding: 0 16px;
   background: white;
@@ -1503,6 +1519,7 @@ h2 {
   .source-band,
   .vpn-feature,
   .recommendation-box,
+  .page-cta,
   .split-section,
   .journey-grid,
   .newsletter {
@@ -1591,6 +1608,7 @@ h2 {
   .vpn-feature,
   .vpn-provider-card,
   .recommendation-box,
+  .page-cta,
   .journey-card {
     padding: 18px;
   }

@@ -124,9 +124,10 @@
         </span>
       </a>
       <nav class="nav-links" aria-label="Primary navigation">
-        <a href="/#featured-guides">Guides</a>
-        <a href="/guides/areas-to-live">Areas</a>
-        <a href="/guides/essential-apps">Essential apps</a>
+        <a href="/#featured-guides" data-i18n="navGuides">Guides</a>
+        <a href="/guides/essential-apps" data-i18n="navApps">Apps</a>
+        <a href="/guides/areas-to-live" data-i18n="navAreas">Areas</a>
+        <a href="/living-in-shanghai" data-i18n="navLiving">Living in Shanghai</a>
       </nav>
       <button class="language-toggle" type="button" aria-label="Switch language">
         <span data-lang-label>中文</span>
@@ -857,47 +858,79 @@
         </div>
       </section>
 
-      <!-- CALL TO ACTION / RELATED GUIDES -->
-      <section class="section source-band" id="related" aria-labelledby="related-title">
-        <div>
-          <p class="eyebrow">Keep reading</p>
-          <h2 id="related-title">Related guides</h2>
+      <section class="section section-tight" id="related-guides" aria-labelledby="related-guides-title">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="relatedEyebrow">Related guides</p>
+          <h2 id="related-guides-title" data-i18n="relatedTitle">Plan the rest of your Shanghai setup</h2>
+          <p>Alipay is one of the most important apps to set up before arriving in Shanghai. Download it before your trip, add your international bank card, complete verification, and test the app as soon as you arrive.</p>
         </div>
-        <p>Alipay is one of the most important apps to set up before arriving in Shanghai. Download it before your trip, add your international bank card, complete verification, and test the app as soon as you arrive.</p>
-        <div class="guide-grid" style="margin-top:24px">
+        <div class="guide-grid">
           <article class="guide-card">
-            <p class="card-kicker">Apps</p>
-            <h3><a class="guide-card-link" href="/guides/essential-apps">Essential Apps for Shanghai</a></h3>
-            <p>The complete setup list for newcomers, including WeChat, Alipay, Didi, and more.</p>
+            <a href="/guides/essential-apps" class="guide-card-link" aria-label="Essential apps for Shanghai"></a>
+            <div>
+              <span class="card-kicker">Apps</span>
+              <h3>Essential Apps for Shanghai</h3>
+              <p>The complete setup list for newcomers, including WeChat, Alipay, Didi, and more.</p>
+            </div>
           </article>
           <article class="guide-card">
-            <p class="card-kicker">Payments</p>
-            <h3><a class="guide-card-link" href="/guides/how-to-use-wechat-pay">How to Use WeChat Pay in China</a></h3>
-            <p>Set up WeChat Pay alongside Alipay for complete mobile payment coverage in Shanghai.</p>
+            <a href="/guides/how-to-use-wechat-pay" class="guide-card-link" aria-label="How to use WeChat Pay in China"></a>
+            <div>
+              <span class="card-kicker">Payments</span>
+              <h3>How to Use WeChat Pay in China</h3>
+              <p>Set up WeChat Pay alongside Alipay for complete mobile payment coverage in Shanghai.</p>
+            </div>
           </article>
           <article class="guide-card">
-            <p class="card-kicker">Internet</p>
-            <h3><a class="guide-card-link" href="/guides/best-vpns-for-china">Best VPNs for China</a></h3>
-            <p>Install and test a VPN before arrival. Turn it off when paying with Alipay or WeChat Pay.</p>
+            <a href="/guides/best-vpns-for-china" class="guide-card-link" aria-label="Best VPNs for China"></a>
+            <div>
+              <span class="card-kicker">Internet</span>
+              <h3>Best VPNs for China</h3>
+              <p>Install and test a VPN before arrival. Turn it off when paying with Alipay or WeChat Pay.</p>
+            </div>
           </article>
           <article class="guide-card">
-            <p class="card-kicker">Transport</p>
-            <h3><a class="guide-card-link" href="/guides/shanghai-metro-guide">Shanghai Metro Guide</a></h3>
-            <p>Lines, fares, airport connections, and how to use Alipay on the metro.</p>
+            <a href="/guides/shanghai-metro-guide" class="guide-card-link" aria-label="Shanghai Metro guide"></a>
+            <div>
+              <span class="card-kicker">Transport</span>
+              <h3>Shanghai Metro Guide</h3>
+              <p>Lines, fares, airport connections, and how to use Alipay on the metro.</p>
+            </div>
           </article>
           <article class="guide-card">
-            <p class="card-kicker">Connectivity</p>
-            <h3><a class="guide-card-link" href="/guides/sim-cards-internet-access">SIM Cards and Internet Access</a></h3>
-            <p>Get a working SIM card before you need it for Alipay SMS verification.</p>
+            <a href="/guides/sim-cards-internet-access" class="guide-card-link" aria-label="SIM cards and internet access"></a>
+            <div>
+              <span class="card-kicker">Connectivity</span>
+              <h3>SIM Cards and Internet Access</h3>
+              <p>Get a working SIM card before you need it for Alipay SMS verification.</p>
+            </div>
           </article>
           <article class="guide-card">
-            <p class="card-kicker">Transport</p>
-            <h3><a class="guide-card-link" href="/guides/pudong-airport-to-city">Pudong Airport to City Centre</a></h3>
-            <p>Metro, Maglev, taxi, and transfer options from the airport into Shanghai.</p>
+            <a href="/guides/pudong-airport-to-city" class="guide-card-link" aria-label="Pudong Airport to city centre"></a>
+            <div>
+              <span class="card-kicker">Transport</span>
+              <h3>Pudong Airport to City Centre</h3>
+              <p>Metro, Maglev, taxi, and transfer options from the airport into Shanghai.</p>
+            </div>
           </article>
         </div>
       </section>
 
+
+      <section class="section page-cta" aria-labelledby="page-cta-title">
+        <div>
+          <p class="eyebrow" data-i18n="ctaEyebrow">Next step</p>
+          <h2 id="page-cta-title" data-i18n="ctaTitle">New to Shanghai? Start with the essentials</h2>
+          <p data-i18n="ctaCopy">
+            Set up payments, apps, and transport with the Shanghai starter guides, then explore neighbourhoods and daily life at your own pace.
+          </p>
+        </div>
+        <div class="cta-actions">
+          <a href="/guides/essential-apps" data-i18n="ctaApps">Essential apps</a>
+          <a href="/guides/arrival-checklist" data-i18n="ctaChecklist">Arrival checklist</a>
+          <a href="/living-in-shanghai" data-i18n="ctaLiving">Living in Shanghai</a>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">

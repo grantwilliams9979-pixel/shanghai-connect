@@ -431,7 +431,17 @@ const copy = {
       "Ask about lease terms, fapiao needs, residence registration support, utilities, repairs, and agent fees.",
     areasSourcesCopy:
       "This guide uses Shanghai Connect's source map for neighbourhood scope and cross-checks newcomer themes against expat accommodation guidance. It is a practical shortlist, not a rent-price database.",
-    areasOfficialSource: "Accommodation guide reference"
+    areasOfficialSource: "Accommodation guide reference",
+    relatedEyebrow: "Related guides",
+    relatedTitle: "Plan the rest of your Shanghai setup",
+    ctaEyebrow: "Next step",
+    ctaTitle: "New to Shanghai? Start with the essentials",
+    ctaCopy:
+      "Set up payments, apps, and transport with the Shanghai starter guides, then explore neighbourhoods and daily life at your own pace.",
+    ctaApps: "Essential apps",
+    ctaChecklist: "Arrival checklist",
+    ctaLiving: "Living in Shanghai",
+    ctaMoving: "Moving to Shanghai"
   },
   zh: {
     navStartHere: "从这里开始",
@@ -634,7 +644,16 @@ const copy = {
     emailPlaceholder: "邮箱地址",
     joinButton: "加入 Shanghai Connect",
     footerPlan: "产品计划",
-    footerGuides: "入门包"
+    footerGuides: "入门包",
+    relatedEyebrow: "相关指南",
+    relatedTitle: "继续规划你的上海生活",
+    ctaEyebrow: "下一步",
+    ctaTitle: "刚到上海？从必备指南开始",
+    ctaCopy: "先用上海入门指南搞定支付、应用和交通，再慢慢探索居住区域和日常生活。",
+    ctaApps: "必备应用",
+    ctaChecklist: "抵达清单",
+    ctaLiving: "上海生活",
+    ctaMoving: "搬来上海"
   }
 };
 

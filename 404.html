@@ -15,7 +15,7 @@
     <link rel="manifest" href="/assets/brand/site.webmanifest" />
     <meta name="theme-color" content="#55552c" />
   </head>
-  <body>
+  <body class="guide-page">
     <header class="site-header" data-elevated="false">
       <a class="brand" href="/" aria-label="Shanghai Connect home">
         <img class="brand-mark" src="/assets/brand/favicon.svg" alt="" width="38" height="38" />
@@ -24,21 +24,59 @@
           <small>上海指南</small>
         </span>
       </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="/#featured-guides" data-i18n="navGuides">Guides</a>
+        <a href="/guides/essential-apps" data-i18n="navApps">Apps</a>
+        <a href="/guides/areas-to-live" data-i18n="navAreas">Areas</a>
+        <a href="/living-in-shanghai" data-i18n="navLiving">Living in Shanghai</a>
+      </nav>
+      <button class="language-toggle" type="button" aria-label="Switch language">
+        <span data-lang-label>中文</span>
+      </button>
     </header>
 
     <main>
-      <section class="section" style="padding-top: 6rem; text-align: center">
-        <p class="eyebrow">Error 404</p>
-        <h1>Page not found</h1>
-        <p style="max-width: 40rem; margin: 1rem auto 2rem auto">
-          We could not find the page you were looking for. Start from the homepage or jump into a popular guide.
-        </p>
-        <div class="guide-actions" style="justify-content: center">
-          <a href="/">Back to homepage</a>
-          <a href="/guides/essential-apps">Essential apps guide</a>
-          <a href="/guides/areas-to-live">Areas to live</a>
+      <section class="guide-hero" aria-labelledby="notfound-title">
+        <div class="guide-hero-inner">
+          <p class="eyebrow">Error 404</p>
+          <h1 id="notfound-title">Page not found.</h1>
+          <p class="hero-copy">
+            We could not find the page you were looking for. Start from the homepage or jump into a popular guide.
+          </p>
+          <div class="guide-actions" aria-label="Popular destinations">
+            <a href="/">Back to homepage</a>
+            <a href="/guides/essential-apps">Essential apps guide</a>
+            <a href="/guides/areas-to-live">Areas to live</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-tight" id="related-guides" aria-labelledby="related-guides-title">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="relatedEyebrow">Related guides</p>
+          <h2 id="related-guides-title" data-i18n="relatedTitle">Plan the rest of your Shanghai setup</h2>
+        </div>
+        <div class="internal-link-grid">
+          <a href="/guides/essential-apps">Essential apps for Shanghai</a>
+          <a href="/guides/arrival-checklist">Shanghai arrival checklist</a>
+          <a href="/guides/best-vpns-for-china">Best VPNs for China</a>
+          <a href="/guides/areas-to-live">Where to live in Shanghai</a>
+          <a href="/living-in-shanghai">Living in Shanghai</a>
+          <a href="/moving-to-shanghai">Moving to Shanghai</a>
         </div>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <a class="brand" href="/" aria-label="Shanghai Connect home">
+        <img class="brand-mark" src="/assets/brand/favicon.svg" alt="" width="38" height="38" />
+        <span>
+          <strong>Shanghai Connect</strong>
+          <small>上海指南</small>
+        </span>
+      </a>
+    </footer>
+
+    <script src="/script.js"></script>
   </body>
 </html>
