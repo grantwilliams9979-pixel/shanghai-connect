@@ -105,4 +105,19 @@
     <lastmod>2026-07-02</lastmod>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://shanghai-connect.com/privacy-policy</loc>
+    <lastmod>2026-07-04</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://shanghai-connect.com/disclaimer</loc>
+    <lastmod>2026-07-04</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://shanghai-connect.com/affiliate-disclosure</loc>
+    <lastmod>2026-07-04</lastmod>
+    <priority>0.3</priority>
+  </url>
 </urlset>
