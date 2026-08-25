@@ -20,7 +20,7 @@
     <link rel="alternate" hreflang="en" href="https://shanghai-connect.com/guides/essential-apps?lang=en" />
     <link rel="alternate" hreflang="zh" href="https://shanghai-connect.com/guides/essential-apps?lang=zh" />
     <link rel="alternate" hreflang="x-default" href="https://shanghai-connect.com/" />
-    <link rel="stylesheet" href="/styles.css?v=20260825" />
+    <link rel="stylesheet" href="/styles.css?v=20260826" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -174,16 +174,28 @@
         </div>
       </section>
 
+      <nav class="section-nav" aria-label="Section navigation">
+        <a href="#five-apps">Essentials</a>
+        <a href="#before-you-fly">Before You Fly</a>
+        <a href="#payments">Payments</a>
+        <a href="#getting-around">Getting Around</a>
+        <a href="#food">Food</a>
+        <a href="#shopping">Shopping</a>
+        <a href="#travel">Travel</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
       <section class="section section-tight" id="five-apps" aria-labelledby="five-apps-title">
         <div class="section-heading">
           <p class="eyebrow">Start here</p>
           <h2 id="five-apps-title">If you only download five apps</h2>
         </div>
         <p>This is the shortlist for someone arriving tomorrow. Everything else in this guide can wait.</p>
-        <div class="app-list">
+        <div class="app-list app-list--feature-last">
           <article class="app-card">
             <a href="#wechat" class="app-card-link" aria-label="Jump to WeChat details"></a>
             <div>
+              <span class="app-icon app-icon--wechat" aria-hidden="true">微</span>
               <span class="app-stage">01 · Communication</span>
               <h3>WeChat <span>微信</span></h3>
               <p>How much of China communicates — messages, contacts, landlords, schools, and increasingly payments. Verify your account before you fly.</p>
@@ -193,6 +205,7 @@
           <article class="app-card">
             <a href="#alipay" class="app-card-link" aria-label="Jump to Alipay details"></a>
             <div>
+              <span class="app-icon app-icon--alipay" aria-hidden="true">支</span>
               <span class="app-stage">02 · Payments</span>
               <h3>Alipay <span>支付宝</span></h3>
               <p>The easiest all-round newcomer app: payments, transport QR codes, and mini apps. No Chinese bank account required to start.</p>
@@ -202,6 +215,7 @@
           <article class="app-card">
             <a href="#amap" class="app-card-link" aria-label="Jump to Amap details"></a>
             <div>
+              <span class="app-icon app-icon--amap" aria-hidden="true">高</span>
               <span class="app-stage">03 · Navigation</span>
               <h3>Amap <span>高德地图</span></h3>
               <p>Better than an overseas maps app for Chinese addresses, compound gates, and metro routing. Start here rather than downloading two map apps.</p>
@@ -211,6 +225,7 @@
           <article class="app-card">
             <a href="#sh-maas" class="app-card-link" aria-label="Jump to SH MaaS details"></a>
             <div>
+              <span class="app-icon app-icon--shmaas" aria-hidden="true">随</span>
               <span class="app-stage">04 · Transport</span>
               <h3>SH MaaS <span>随申行</span></h3>
               <p>Shanghai's official all-in-one transport app — metro, buses, ferries, and transport QR codes. Use Amap to find the route, SH MaaS to travel it.</p>
@@ -220,6 +235,7 @@
           <article class="app-card">
             <a href="#translation" class="app-card-link" aria-label="Jump to translation setup details"></a>
             <div>
+              <span class="app-icon app-icon--translate" aria-hidden="true">译</span>
               <span class="app-stage">05 · Translation</span>
               <h3>A translation setup</h3>
               <p>Not one app — a combination. Pleco for dictionary lookups, plus a China-accessible photo/voice translator. Google Translate is a backup, not a plan.</p>
@@ -234,9 +250,12 @@
           <p class="eyebrow">Setup timeline</p>
           <h2 id="before-you-fly-title">What to install, and when</h2>
         </div>
-        <div class="timeline-grid">
+        <div class="timeline-grid timeline-grid--4up">
           <article class="timeline-card">
-            <span class="timeline-number">Before you fly</span>
+            <div class="timeline-stage-head">
+              <span class="journey-step">1</span>
+              <span class="timeline-number">Before you fly</span>
+            </div>
             <h3>Get set up</h3>
             <p>Install and verify these before you leave — some verification steps are easier with a stable home connection.</p>
             <ul>
@@ -248,7 +267,10 @@
             </ul>
           </article>
           <article class="timeline-card">
-            <span class="timeline-number">Once you land</span>
+            <div class="timeline-stage-head">
+              <span class="journey-step">2</span>
+              <span class="timeline-number">Once you land</span>
+            </div>
             <h3>Get moving</h3>
             <p>Add these once you're on the ground and need to get around.</p>
             <ul>
@@ -257,7 +279,10 @@
             </ul>
           </article>
           <article class="timeline-card">
-            <span class="timeline-number">Once you know your address</span>
+            <div class="timeline-stage-head">
+              <span class="journey-step">3</span>
+              <span class="timeline-number">Once you know your address</span>
+            </div>
             <h3>Get fed</h3>
             <p>Delivery apps need a real, detailed address to work properly.</p>
             <ul>
@@ -266,7 +291,10 @@
             </ul>
           </article>
           <article class="timeline-card">
-            <span class="timeline-number">Once you're settled</span>
+            <div class="timeline-stage-head">
+              <span class="journey-step">4</span>
+              <span class="timeline-number">Once you're settled</span>
+            </div>
             <h3>Get comfortable</h3>
             <p>Add these once your basics are working and you're exploring more.</p>
             <ul>
@@ -279,43 +307,58 @@
         </div>
 
         <h3>Five things to do before you fly</h3>
-        <ol class="arrival-list">
+        <ol class="arrival-list arrival-list--compact arrival-list--grid">
           <li>
             <a href="#alipay">
               <span>01</span>
               <strong>Set up payments</strong>
-              <p>Verify Alipay and WeChat, and add your international bank card where supported, before you're standing at a checkout counter.</p>
+              <p>Verify Alipay and WeChat, and add your international card where supported.</p>
             </a>
           </li>
           <li>
             <a href="/guides/best-vpns-for-china">
               <span>02</span>
               <strong>Sort out connectivity</strong>
-              <p>If you need access to overseas services for work, school, or personal accounts, arrange your VPN before entering mainland China — not after.</p>
+              <p>Arrange your VPN before entering mainland China — not after.</p>
             </a>
           </li>
           <li>
             <a href="#translation">
               <span>03</span>
               <strong>Download translation tools</strong>
-              <p>Include offline dictionary data wherever possible, so menus and signs still work without signal.</p>
+              <p>Include offline dictionary data so menus and signs work without signal.</p>
             </a>
           </li>
           <li>
             <a href="#didi">
               <span>04</span>
               <strong>Save addresses in Chinese</strong>
-              <p>Keep Chinese text and screenshots for your hotel, home, workplace, school, and airport destination.</p>
+              <p>Keep Chinese text and screenshots for your hotel, home, workplace, and school.</p>
             </a>
           </li>
           <li>
             <a href="/guides/sim-cards-internet-access">
               <span>05</span>
               <strong>Use a phone number you can keep accessing</strong>
-              <p>Verification codes become a real problem if your payment and travel accounts are tied to a number you later lose.</p>
+              <p>Verification codes are a real problem if you later lose access to that number.</p>
             </a>
           </li>
         </ol>
+      </section>
+
+      <section class="section section-tight" id="quick-guide" aria-labelledby="quick-guide-title">
+        <div class="pdf-cta">
+          <div class="pdf-mock" aria-hidden="true"></div>
+          <div>
+            <p class="eyebrow">Take it with you</p>
+            <h2 id="quick-guide-title">Essential Apps Quick Guide</h2>
+            <p>The two-page version of this guide for your phone, flight, or arrival day.</p>
+            <div class="pdf-cta-actions">
+              <a class="btn-coral" href="/assets/downloads/shanghai-connect-essential-apps-guide.pdf" download>Download PDF</a>
+              <p class="pdf-cta-note">No email required.</p>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section class="section section-tight" id="payments" aria-labelledby="payments-title">
@@ -323,39 +366,43 @@
           <p class="eyebrow">Payments &amp; communication</p>
           <h2 id="payments-title">WeChat and Alipay</h2>
         </div>
-        <div class="app-list app-list--single">
-          <article class="app-card" id="wechat">
+        <div class="app-row-list">
+          <div class="app-row" id="wechat">
+            <span class="app-icon app-icon--wechat" aria-hidden="true">微</span>
             <div>
-              <span class="app-stage">Best for: Communication</span>
               <h3>WeChat <span>微信</span></h3>
-              <div class="card-tags"><span>English</span><span>Set up before flying</span><span>Some intl. card payments</span></div>
-              <p>WeChat is how much of China communicates: messages, group chats, contacts, schools, landlords, businesses, mini programs, and increasingly payments. Once you live here, a lot of daily life happens inside it.</p>
-              <p>Create and verify your account before you land — verification is easier with a stable connection and a contact who already uses WeChat, both of which are harder to arrange on arrival day.</p>
-              <p>International cards are supported for many payment functions, but some transfers, red packets, and receiving money from friends stay restricted to accounts linked to a Chinese bank card.</p>
+              <span class="app-stage">Best for: Communication</span>
+              <div class="card-tags"><span>English</span><span>Set up before flying</span></div>
+              <p>WeChat is how much of China communicates — messages, contacts, schools, landlords, businesses, mini programs, and increasingly payments. Verify your account before you land; it's easier with a stable connection and a contact who already uses WeChat. International cards cover many payments, but transfers and red packets usually need a Chinese bank card.</p>
               <div class="store-links">
                 <a href="https://apps.apple.com/us/app/wechat/id414478124" target="_blank" rel="noopener">iOS</a>
                 <a href="https://play.google.com/store/apps/details?id=com.tencent.mm" target="_blank" rel="noopener">Android</a>
               </div>
             </div>
-          </article>
-          <article class="app-card" id="alipay">
+          </div>
+          <div class="app-row" id="alipay">
+            <span class="app-icon app-icon--alipay" aria-hidden="true">支</span>
             <div>
-              <span class="app-stage">Best for: Payments + transport + mini apps</span>
               <h3>Alipay <span>支付宝</span></h3>
+              <span class="app-stage">Best for: Payments + transport + mini apps</span>
               <div class="card-tags"><span>English</span><span>Foreign cards</span><span>Set up before flying</span></div>
-              <p>Alipay is the easiest all-round newcomer app. Use it for shop and restaurant payments, transport QR codes, and a large range of city-service mini apps. A Chinese bank account is not required to start using many payment functions.</p>
-              <p>Link a supported overseas bank card and complete identity verification with your passport before you arrive — this reduces payment interruptions and can raise your transaction limits.</p>
-              <p>Alipay and WeChat overlap, but neither fully replaces the other. See <a href="#do-i-need-both">whether you need both</a> below, and our full <a href="/guides/how-to-use-alipay-in-china">Alipay setup guide</a> and <a href="/guides/mobile-payments-china-foreigners">mobile payments guide</a> for fees, limits, and troubleshooting.</p>
+              <p>The easiest all-round newcomer app — shop and restaurant payments, transport QR codes, and a wide range of city-service mini apps. No Chinese bank account needed to start. Link a supported overseas card and verify with your passport before you arrive to avoid interruptions and raise your limits. Full setup: <a href="/guides/how-to-use-alipay-in-china">Alipay guide</a> · <a href="/guides/mobile-payments-china-foreigners">mobile payments guide</a>.</p>
               <div class="store-links">
                 <a href="https://apps.apple.com/us/app/alipay-simplify-your-life/id333206289" target="_blank" rel="noopener">iOS</a>
                 <a href="https://play.google.com/store/apps/details?id=com.eg.android.AlipayGphone" target="_blank" rel="noopener">Android</a>
               </div>
             </div>
-          </article>
+          </div>
         </div>
 
-        <div class="notice-box" id="do-i-need-both">
-          <p><strong>Do I need both WeChat and Alipay? Yes.</strong> Use WeChat for communication, contacts, groups, and mini programs. Use Alipay for payments, transport, and services. Both can support international cards for many everyday payments, but some functions available to Chinese bank account holders will be unavailable or restricted. They overlap, but they are not interchangeable.</p>
+        <h3 id="do-i-need-both">Do I need both WeChat and Alipay?</h3>
+        <div class="pros-cons">
+          <div><strong>WeChat — best for</strong><p>Communication, contacts, groups, mini programs, social ecosystem.</p></div>
+          <div><strong>Alipay — best for</strong><p>Payments, transport, city services, newcomer setup.</p></div>
+        </div>
+        <div class="notice-box">
+          <p class="notice-label notice-label--accent">Good to know</p>
+          <p><strong>Yes — get both.</strong> Both support international cards for many everyday payments, but some functions restricted to Chinese-bank-account holders won't be available. They overlap, but they are not interchangeable.</p>
         </div>
       </section>
 
@@ -366,73 +413,76 @@
         </div>
 
         <h3>Amap vs Baidu Maps</h3>
-        <p><strong>Choose Amap</strong> if you want the more international-user-friendly starting point, with English navigation for Chinese addresses, compound gates, walking routes, and metro journeys.</p>
-        <p><strong>Choose Baidu Maps</strong> if you're comfortable with a more Chinese-language-heavy experience and want a second comprehensive local map.</p>
+        <div class="pros-cons">
+          <div><strong>Amap — choose this if</strong><p>You want English navigation and the easiest starting point for international users.</p></div>
+          <div><strong>Baidu Maps — choose this if</strong><p>You're comfortable with more Chinese and want a second comprehensive local map.</p></div>
+        </div>
         <div class="notice-box">
-          <p><strong>Our pick:</strong> most newcomers only need one map app. Start with Amap, and only add Baidu Maps later if you find you want it.</p>
+          <p class="notice-label notice-label--accent">Our pick</p>
+          <p>Start with Amap. Most newcomers do not need both.</p>
         </div>
 
-        <div class="app-list app-list--single">
-          <article class="app-card" id="amap">
+        <div class="app-row-list">
+          <div class="app-row" id="amap">
+            <span class="app-icon app-icon--amap" aria-hidden="true">高</span>
             <div>
-              <span class="app-stage">Best for: Navigation</span>
               <h3>Amap <span>高德地图</span></h3>
+              <span class="app-stage">Best for: Navigation</span>
               <div class="card-tags"><span>English</span><span>Set up before flying</span></div>
-              <p>Amap is the primary mapping recommendation for newcomers. It's more useful than an overseas maps app for Chinese addresses, residential compound entrances, restaurants, walking routes, metro journeys, and local points of interest, and it has become increasingly friendly to international users with English-language navigation.</p>
-              <p>Prefer Baidu Maps instead? It's a solid alternative — just start with one rather than juggling both.</p>
-              <div class="store-links">
-                <a href="https://apps.apple.com/us/app/百度地图-路线规划-出行必备/id452186370" target="_blank" rel="noopener">Baidu Maps (iOS)</a>
-                <a href="https://play.google.com/store/apps/details?id=com.baidu.BaiduMap" target="_blank" rel="noopener">Baidu Maps (Android)</a>
-              </div>
+              <p>The primary mapping pick for newcomers — better than an overseas maps app for Chinese addresses, compound entrances, walking routes, and metro journeys, with English-language navigation.</p>
             </div>
-          </article>
-          <article class="app-card" id="sh-maas">
+          </div>
+          <div class="app-row" id="sh-maas">
+            <span class="app-icon app-icon--shmaas" aria-hidden="true">随</span>
             <div>
-              <span class="app-stage">Best for: Shanghai public transport</span>
               <h3>SH MaaS <span>随申行</span></h3>
+              <span class="app-stage">Best for: Shanghai public transport</span>
               <div class="card-tags"><span>Foreign cards supported</span></div>
-              <p>SH MaaS is Shanghai's official all-in-one transport app — metro, buses, ferries, transport QR codes, and passes, in one place. It's the primary transport recommendation for the city, ahead of single-purpose metro apps.</p>
-              <p>The core booking and QR flows include English-language options, though expect more Chinese in secondary screens. International bank cards can also be supported.</p>
-              <p><strong>Practical routine:</strong> use Amap to work out where you're going, then SH MaaS to actually get there. See our full <a href="/guides/shanghai-metro-guide">Shanghai Metro guide</a> and <a href="/guides/shanghai-transportation">getting around Shanghai guide</a> for route planning and fares.</p>
-              <p>MetroMan still works as a simple, optional metro-route planner if you want a lighter app just for line names and last-train times — but it's no longer the main transport app to reach for.</p>
+              <p>Shanghai's official all-in-one transport app — metro, buses, ferries, transport QR codes, and passes, with English options in the core booking flow. Use Amap to find the route, SH MaaS to travel it. Full detail: <a href="/guides/shanghai-metro-guide">Metro guide</a> · <a href="/guides/shanghai-transportation">getting around Shanghai</a>.</p>
+              <p class="app-note">MetroMan still works as a lighter, optional route planner for line names and last-train times.</p>
               <div class="store-links">
                 <a href="https://apps.apple.com/us/app/metroman-china/id466351433" target="_blank" rel="noopener">MetroMan (iOS)</a>
                 <a href="https://play.google.com/store/apps/details?id=com.xinlukou.metroman" target="_blank" rel="noopener">MetroMan (Android)</a>
               </div>
             </div>
-          </article>
-          <article class="app-card" id="didi">
+          </div>
+          <div class="app-row" id="didi">
+            <span class="app-icon app-icon--didi" aria-hidden="true">滴</span>
             <div>
-              <span class="app-stage">Best for: Taxis and ride-hailing</span>
               <h3>DiDi <span>滴滴出行</span></h3>
+              <span class="app-stage">Best for: Taxis and ride-hailing</span>
               <div class="card-tags"><span>English</span></div>
-              <p>DiDi has English-language functionality and lets you enter a destination directly, instead of explaining an address to a driver out loud.</p>
-              <p><strong>Do you need the standalone app? Not necessarily.</strong> Ride-hailing is also available through Alipay and WeChat's wider ecosystem. Download the standalone app if you use taxis often or prefer a dedicated interface — otherwise skip it and use what's already on your phone. Our <a href="/guides/taxis-didi-airport-transfers">DiDi and airport transfers guide</a> covers booking in detail.</p>
+              <p>English-language functionality lets you enter a destination directly, instead of explaining an address to a driver out loud. Full guide: <a href="/guides/taxis-didi-airport-transfers">DiDi and airport transfers</a>.</p>
               <div class="store-links">
                 <a href="https://apps.apple.com/us/app/didi-rider/id1362398401" target="_blank" rel="noopener">iOS</a>
                 <a href="https://play.google.com/store/apps/details?id=com.didiglobal.passenger" target="_blank" rel="noopener">Android</a>
               </div>
             </div>
-          </article>
+          </div>
         </div>
         <div class="notice-box">
-          <p><strong>Shanghai tip:</strong> save your home, hotel, and workplace addresses in Chinese before your first DiDi ride. Drivers sometimes call when they arrive, and having the Chinese address ready prevents confusion.</p>
+          <p class="notice-label notice-label--accent">Don't need another app?</p>
+          <p>DiDi can also be accessed through the wider WeChat / Alipay ecosystem. Download the standalone app only if you use taxis often or prefer a dedicated interface.</p>
+        </div>
+        <div class="notice-box">
+          <p class="notice-label notice-label--accent">Shanghai tip</p>
+          <p>Save your home, hotel, and workplace addresses in Chinese before your first DiDi ride. Drivers sometimes call when they arrive.</p>
         </div>
 
-        <div class="app-list app-list--single">
-          <article class="app-card" id="translation">
+        <div class="app-row-list">
+          <div class="app-row" id="translation">
+            <span class="app-icon app-icon--translate" aria-hidden="true">译</span>
             <div>
-              <span class="app-stage">Best for: Getting through daily life</span>
               <h3>A translation setup <span>翻译工具</span></h3>
+              <span class="app-stage">Best for: Getting through daily life</span>
               <div class="card-tags"><span>Set up before flying</span></div>
-              <p>Don't rely on a single app. Use Pleco as a proper Chinese dictionary — words, characters, menus, signs — and pair it with Baidu Translate or another China-accessible photo/voice translator for on-the-spot conversations and signage.</p>
-              <p>Google Translate is worth keeping as an <strong>offline backup</strong> with downloaded language packs, but don't assume normal online Google functionality will be available on a standard mainland China connection.</p>
+              <p>Don't rely on a single app. Use Pleco as a proper Chinese dictionary — words, characters, menus, signs — paired with Baidu Translate or another China-accessible photo/voice translator. Keep Google Translate as an offline backup only; normal online Google functionality isn't guaranteed on a standard mainland China connection.</p>
               <div class="store-links">
                 <a href="https://apps.apple.com/us/app/pleco-chinese-dictionary/id341922306" target="_blank" rel="noopener">Pleco (iOS)</a>
                 <a href="https://play.google.com/store/apps/details?id=com.pleco.chinesesystem" target="_blank" rel="noopener">Pleco (Android)</a>
               </div>
             </div>
-          </article>
+          </div>
         </div>
       </section>
 
@@ -441,39 +491,51 @@
           <p class="eyebrow">Food &amp; everyday life</p>
           <h2 id="food-title">Delivery, once you have an address</h2>
         </div>
-        <div class="app-list app-list--single">
-          <article class="app-card" id="meituan">
+        <div class="app-row-list">
+          <div class="app-row" id="meituan">
+            <span class="app-icon app-icon--meituan" aria-hidden="true">美</span>
             <div>
-              <span class="app-stage">Best for: Food delivery and local services</span>
               <h3>Meituan <span>美团</span></h3>
+              <span class="app-stage">Best for: Food delivery and local services</span>
               <div class="card-tags"><span>Interface mostly Chinese</span></div>
-              <p>Meituan covers restaurants, takeaway, local services, and deals — much more than just food delivery.</p>
-              <p><strong>What catches newcomers out:</strong> your delivery address must be detailed. Entering only your compound name isn't enough. Include the road, compound name, building number, floor and apartment, and a working phone number, or your order won't arrive.</p>
+              <p>Covers restaurants, takeaway, local services, and deals — much more than just food delivery. See the Shanghai tip below before your first order.</p>
               <div class="store-links">
                 <a href="https://apps.apple.com/us/app/美团-美好生活小帮手/id423084029" target="_blank" rel="noopener">iOS</a>
                 <a href="https://play.google.com/store/apps/details?id=com.sankuai.meituan" target="_blank" rel="noopener">Android</a>
               </div>
             </div>
-          </article>
-          <article class="app-card" id="taobao-flash-shopping">
+          </div>
+          <div class="app-row" id="taobao-flash-shopping">
+            <span class="app-icon app-icon--flash" aria-hidden="true">闪</span>
             <div>
-              <span class="app-stage">Best for: Fast local delivery</span>
               <h3>Taobao Flash Shopping <span>淘宝闪购</span></h3>
-              <p>Older China guides often recommend Ele.me — that advice is outdated. Ele.me's services have increasingly moved into Taobao Flash Shopping's branding and ecosystem, so this is the current name to look for.</p>
-              <p>Use it for meals, groceries, drinks, convenience items, and rapid local delivery. The same detailed-address rule as Meituan applies.</p>
+              <span class="app-stage">Best for: Fast local delivery</span>
+              <p>Meals, groceries, drinks, convenience items, and rapid local delivery. The same detailed-address rule as Meituan applies.</p>
             </div>
-          </article>
-          <article class="app-card" id="dianping">
+          </div>
+          <div class="app-row" id="dianping">
+            <span class="app-icon app-icon--dianping" aria-hidden="true">点</span>
             <div>
-              <span class="app-stage">Best for: Discovering restaurants and local places</span>
               <h3>Dianping <span>大众点评</span></h3>
-              <p>Think of Dianping as restaurant discovery, local reviews, photos, and deals combined. It becomes genuinely useful once you start actively exploring your neighbourhood and the wider city.</p>
-              <p><strong>Worth downloading on day one?</strong> No. <strong>Worth having once you live here?</strong> Yes.</p>
+              <span class="app-stage">Best for: Discovering restaurants and local places</span>
+              <p>Restaurant discovery, local reviews, photos, and deals — genuinely useful once you start exploring your neighbourhood. Worth downloading day one? No. Once you live here? Yes.</p>
             </div>
-          </article>
+          </div>
         </div>
         <div class="notice-box">
-          <p><strong>Good to know:</strong> you don't need both Meituan and Taobao Flash Shopping immediately. Start with one and add the other later if you want more choice.</p>
+          <p class="notice-label notice-label--accent">Shanghai tip</p>
+          <p>Your delivery address needs more than your compound name. Include:</p>
+          <ul>
+            <li>Road</li>
+            <li>Compound</li>
+            <li>Building</li>
+            <li>Floor / apartment</li>
+            <li>Phone number</li>
+          </ul>
+        </div>
+        <div class="notice-box">
+          <p class="notice-label">Good to know</p>
+          <p>Older guides may still refer to Ele.me — its services have moved into Taobao Flash Shopping's branding. You don't need both Meituan and Taobao Flash Shopping immediately; start with one.</p>
         </div>
       </section>
 
@@ -482,18 +544,24 @@
           <p class="eyebrow">Shopping</p>
           <h2 id="shopping-title">Taobao, once you're ready</h2>
         </div>
-        <article class="app-card" id="taobao">
-          <div>
-            <span class="app-stage">Best for: Almost everything</span>
-            <h3>Taobao <span>淘宝</span></h3>
-            <p>Taobao eventually becomes essential for furniture, kitchenware, clothing, electronics, stationery, household products, pet supplies, and everyday essentials.</p>
-            <p>It isn't a day-one priority. Wait until you have digital payments working, a reliable Chinese address, a working phone number, and some confidence using your translation tools — Taobao is far easier to navigate once those basics are in place.</p>
-            <div class="store-links">
-              <a href="https://apps.apple.com/us/app/淘宝-太好逛了吧/id387682726" target="_blank" rel="noopener">iOS</a>
-              <a href="https://play.google.com/store/apps/details?id=com.taobao.taobao" target="_blank" rel="noopener">Android</a>
+        <div class="app-row-list">
+          <div class="app-row" id="taobao">
+            <span class="app-icon app-icon--taobao" aria-hidden="true">淘</span>
+            <div>
+              <h3>Taobao <span>淘宝</span></h3>
+              <span class="app-stage">Best for: Almost everything</span>
+              <p>Eventually essential for furniture, kitchenware, clothing, electronics, stationery, household products, pet supplies, and everyday essentials.</p>
+              <div class="store-links">
+                <a href="https://apps.apple.com/us/app/淘宝-太好逛了吧/id387682726" target="_blank" rel="noopener">iOS</a>
+                <a href="https://play.google.com/store/apps/details?id=com.taobao.taobao" target="_blank" rel="noopener">Android</a>
+              </div>
             </div>
           </div>
-        </article>
+        </div>
+        <div class="notice-box">
+          <p class="notice-label notice-label--accent">Skip for now</p>
+          <p>You don't need Taobao on arrival day. Wait until digital payments, a reliable Chinese address, a working phone number, and some translation-tool confidence are all in place — it's far easier to navigate once those basics are set.</p>
+        </div>
       </section>
 
       <section class="section section-tight" id="travel" aria-labelledby="travel-title">
@@ -501,33 +569,41 @@
           <p class="eyebrow">Travel beyond Shanghai</p>
           <h2 id="travel-title">Trip.com and 12306</h2>
         </div>
-        <div class="app-list app-list--single">
-          <article class="app-card" id="trip-com">
+        <div class="app-row-list">
+          <div class="app-row" id="trip-com">
+            <span class="app-icon app-icon--tripcom" aria-hidden="true">携</span>
             <div>
-              <span class="app-stage">Best for: Easy English-language travel booking</span>
               <h3>Trip.com <span>携程</span></h3>
+              <span class="app-stage">Best for: Easy English-language travel booking</span>
               <div class="card-tags"><span>English</span></div>
-              <p>Useful for hotels, flights, and trains, Trip.com is usually the easiest starting point for foreigners booking domestic travel.</p>
+              <p>Hotels, flights, and trains — usually the easiest starting point for foreigners booking domestic travel.</p>
               <div class="store-links">
                 <a href="https://apps.apple.com/us/app/trip-com-book-flights-hotels/id681752345" target="_blank" rel="noopener">iOS</a>
                 <a href="https://play.google.com/store/apps/details?id=ctrip.english" target="_blank" rel="noopener">Android</a>
               </div>
             </div>
-          </article>
-          <article class="app-card" id="railway-12306">
+          </div>
+          <div class="app-row" id="railway-12306">
+            <span class="app-icon app-icon--railway" aria-hidden="true">铁</span>
             <div>
-              <span class="app-stage">Best for: Booking Chinese trains directly</span>
               <h3>Railway 12306 <span>铁路12306</span></h3>
-              <p>12306 is China's official railway booking platform. Foreign travellers can register using passport details and book trains directly, without a booking-fee markup. Search "铁路12306" or "Railway 12306" in your app store.</p>
+              <span class="app-stage">Best for: Booking Chinese trains directly</span>
+              <p>China's official railway booking platform. Foreign travellers can register with passport details and book trains directly, without a booking-fee markup. Search "铁路12306" or "Railway 12306" in your app store.</p>
             </div>
-          </article>
+          </div>
+        </div>
+        <div class="pros-cons">
+          <div><strong>Trip.com — choose this if</strong><p>Convenience and English support matter most.</p></div>
+          <div><strong>12306 — choose this if</strong><p>You're comfortable booking directly through China's official system.</p></div>
         </div>
         <div class="notice-box">
-          <p><strong>Trip.com or 12306?</strong> Start with Trip.com if convenience and English support matter most. Use 12306 once you're comfortable booking directly through China's official railway system. You don't need both immediately.</p>
+          <p class="notice-label">Good to know</p>
+          <p>You don't need both immediately.</p>
         </div>
 
         <div class="notice-box" id="nihao-china">
-          <p><strong>New / worth knowing — Nihao China.</strong> A newer app aimed at international visitors, bundling payments, transport, and travel features in one place. Useful for short-term visitors. If you're actually living in Shanghai, WeChat and Alipay still matter far more.</p>
+          <p class="notice-label">New / worth knowing</p>
+          <p><strong>Nihao China</strong> bundles payments, transport, and travel features for international visitors — useful for short stays. If you're actually living in Shanghai, WeChat and Alipay still matter far more.</p>
         </div>
       </section>
 

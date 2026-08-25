@@ -15,6 +15,9 @@
   --coral: #ff6b5a;
   --yellow: #ffd166;
   --bone: #e2dcd0;
+  /* WCAG-AA-safe deepened coral (>=4.5:1 with white) for solid-fill CTAs
+     and small accent labels -- --coral itself is too light for that use. */
+  --coral-strong: #c94430;
   --shadow: 0 24px 70px rgba(38, 50, 56, 0.16);
   color-scheme: light;
 }
@@ -626,6 +629,34 @@ h2 {
   line-height: 1.55;
 }
 
+/* Compact variant: same numbered-row pattern, far less padding, so a
+   5-item checklist doesn't cost half a screen of scroll. */
+.arrival-list--compact a {
+  grid-template-columns: 34px 1fr;
+  gap: 2px 14px;
+  padding: 14px 16px;
+}
+
+.arrival-list--compact span {
+  font-size: 13px;
+}
+
+.arrival-list--compact strong {
+  font-size: 16px;
+}
+
+.arrival-list--compact p {
+  font-size: 14px;
+}
+
+.arrival-list--grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.arrival-list--grid li:last-child {
+  grid-column: 1 / -1;
+}
+
 .text-link {
   color: var(--olive-dark);
   font-size: 14px;
@@ -1029,6 +1060,47 @@ h2 {
   color: var(--olive-dark);
 }
 
+/* Sticky in-page section nav: a light-weight rail that mirrors the hero's
+   jump links, placed as a direct child of <main> so it sticks for the
+   full remaining scroll instead of unsticking after one section. */
+.section-nav {
+  position: sticky;
+  top: 74px;
+  z-index: 10;
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding: 10px clamp(18px, 4vw, 56px);
+  background: rgba(255, 253, 248, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+  scrollbar-width: none;
+}
+
+.section-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.section-nav a {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 14px;
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 760;
+  white-space: nowrap;
+  transition: background 150ms ease, color 150ms ease;
+}
+
+.section-nav a:hover,
+.section-nav a:focus-visible {
+  background: var(--bone);
+  color: var(--olive-dark);
+}
+
 .guide-intro {
   display: grid;
   grid-template-columns: minmax(240px, 0.72fr) minmax(0, 1fr);
@@ -1086,6 +1158,25 @@ h2 {
   line-height: 1.5;
 }
 
+.timeline-card ul a {
+  color: var(--olive-dark);
+  font-weight: 760;
+}
+
+.timeline-grid--4up {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.timeline-stage-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.timeline-grid--4up .timeline-card {
+  min-height: 0;
+}
+
 .app-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1099,6 +1190,48 @@ h2 {
 .app-list--single .app-card {
   grid-template-columns: minmax(0, 1fr);
 }
+
+/* Five-apps shortlist: 2 + 2 + 1, with the last (odd) card spanning full
+   width so it reads as a deliberate feature row, not an orphaned half card. */
+.app-list--feature-last .app-card:last-child {
+  grid-column: 1 / -1;
+}
+
+.app-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 850;
+  line-height: 1;
+}
+
+.app-row .app-icon,
+.app-row-list .app-icon {
+  margin-bottom: 0;
+}
+
+.app-icon--wechat    { background: #07c160; color: var(--ink); }
+.app-icon--alipay    { background: #1677ff; color: white; }
+.app-icon--amap      { background: #2d8cf0; color: var(--ink); }
+.app-icon--shmaas    { background: #00838a; color: white; }
+.app-icon--didi      { background: #ff6400; color: var(--ink); }
+.app-icon--translate { background: #4a6572; color: white; }
+.app-icon--meituan   { background: #ffc300; color: var(--ink); }
+.app-icon--taobao    { background: #ff5000; color: var(--ink); }
+.app-icon--flash     { background: #ff7a1a; color: var(--ink); }
+.app-icon--dianping  { background: #ff6633; color: var(--ink); }
+.app-icon--tripcom   { background: #2b6fe0; color: white; }
+.app-icon--railway   { background: #0f5fa8; color: white; }
+.app-icon--pleco     { background: #c0392b; color: white; }
+.app-icon--baidumaps { background: #2932e1; color: white; }
+.app-icon--metroman  { background: #5c7080; color: white; }
+.app-icon--nihao     { background: #17a673; color: var(--ink); }
 
 .app-card {
   position: relative;
@@ -1141,6 +1274,69 @@ h2 {
 .app-card .app-note {
   color: #4f5b54;
   font-size: 14px;
+}
+
+/* Compact editorial row for detailed app write-ups further down the page --
+   deliberately NOT another bordered card, to break up the card-after-card
+   rhythm. A thin divider replaces the box; content grows with no fixed height. */
+.app-row-list {
+  display: grid;
+}
+
+.app-row {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  gap: 18px;
+  padding: 30px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.app-row:first-child {
+  padding-top: 6px;
+}
+
+.app-row:last-child {
+  border-bottom: 0;
+  padding-bottom: 6px;
+}
+
+.app-row h3 {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.app-row h3 span {
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.app-row .app-stage {
+  display: block;
+  margin: 6px 0;
+}
+
+.app-row .card-tags {
+  margin-top: 12px;
+}
+
+.app-row p {
+  max-width: 64ch;
+  margin: 12px 0 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.app-row .store-links {
+  margin-top: 16px;
+}
+
+.app-row .store-links a {
+  min-height: 36px;
+  min-width: 0;
+  padding: 0 12px;
+  font-size: 12px;
 }
 
 .store-links {
@@ -1238,6 +1434,122 @@ h2 {
   margin: 0;
   color: var(--muted);
   line-height: 1.65;
+}
+
+.notice-box p + ul {
+  margin: 10px 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* Small labelled-callout system so Shanghai Connect's own recommendations
+   (Our Pick, Shanghai Tip, Skip For Now...) read as distinct opinions
+   rather than ordinary body copy. Purely additive to .notice-box -- the
+   box itself is untouched so plain notice-box usage elsewhere is unaffected. */
+.notice-label {
+  display: block;
+  margin: 0 0 8px;
+  color: var(--olive-dark);
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.notice-label--accent {
+  color: var(--coral-strong);
+}
+
+/* Downloadable-guide CTA: a calm resource strip, not an ad unit. */
+.pdf-cta {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 28px;
+  align-items: center;
+  padding: 30px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.pdf-mock {
+  position: relative;
+  width: 76px;
+  height: 100px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.pdf-mock::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 12px;
+  right: 12px;
+  height: 5px;
+  background: var(--bone);
+  border-radius: 2px;
+  box-shadow:
+    0 12px 0 var(--bone),
+    0 24px 0 var(--bone),
+    0 36px 0 var(--bone);
+}
+
+.pdf-mock::after {
+  content: "PDF";
+  position: absolute;
+  left: 12px;
+  bottom: 10px;
+  color: var(--coral-strong);
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 0.04em;
+}
+
+.pdf-cta h2 {
+  margin-top: 4px;
+}
+
+.pdf-cta p {
+  max-width: 58ch;
+  margin: 10px 0 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.pdf-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.btn-coral {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 22px;
+  background: var(--coral-strong);
+  color: white;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 850;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.btn-coral:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 26px rgba(201, 68, 48, 0.32);
+}
+
+.pdf-cta-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
 }
 
 .affiliate-note {
@@ -1690,6 +2002,7 @@ h2 {
   .area-strip,
   .decision-grid,
   .timeline-grid,
+  .timeline-grid--4up,
   .app-list,
   .area-profile-grid,
   .score-grid,
@@ -1702,8 +2015,18 @@ h2 {
   .page-cta,
   .split-section,
   .journey-grid,
+  .arrival-list--grid,
+  .pdf-cta,
   .newsletter {
     grid-template-columns: 1fr;
+  }
+
+  .pdf-mock {
+    justify-self: start;
+  }
+
+  .section-nav {
+    top: 66px;
   }
 
   .plan-copy {
@@ -1789,8 +2112,25 @@ h2 {
   .vpn-provider-card,
   .recommendation-box,
   .page-cta,
+  .pdf-cta,
   .journey-card {
     padding: 18px;
+  }
+
+  .app-row {
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 14px;
+    padding: 22px 0;
+  }
+
+  .app-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .pdf-mock {
+    display: none;
   }
 
   .journey-card {
