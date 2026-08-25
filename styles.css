@@ -1092,6 +1092,14 @@ h2 {
   gap: 14px;
 }
 
+.app-list--single {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.app-list--single .app-card {
+  grid-template-columns: minmax(0, 1fr);
+}
+
 .app-card {
   position: relative;
   display: grid;
