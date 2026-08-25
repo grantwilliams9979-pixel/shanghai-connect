@@ -222,9 +222,19 @@ p {
 }
 
 h1,
-h2,
-h3 {
+h2 {
   margin: 0;
+  letter-spacing: 0;
+}
+
+/* Every component that places an h3 inside a card/row (.app-card h3,
+   .timeline-card h3, .guide-card h3, etc.) sets its own explicit margin
+   and overrides this by specificity. This default only reaches a bare
+   <h3> used as a sub-heading directly in section prose (e.g. "Amap vs
+   Baidu Maps", "Do I need both WeChat and Alipay?") -- previously those
+   had zero margin and sat flush against the text before/after them. */
+h3 {
+  margin: 34px 0 14px;
   letter-spacing: 0;
 }
 
