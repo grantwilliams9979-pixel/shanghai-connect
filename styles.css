@@ -2,6 +2,7 @@
   --ink: #263238;
   --muted: #657069;
   --paper: #fffdf8;
+  --paper-accent: #f7f3e6;
   --surface: #ffffff;
   --line: #e4e1d8;
   --steel: #94a5b3;
@@ -374,6 +375,23 @@ h1 {
 
 .section-tight {
   padding-top: 56px;
+}
+
+/* Alternate section background, applied to every other content
+   section so the page reads as distinct blocks instead of one flat
+   column. Bleeds edge-to-edge (the standard 100vw breakout) while the
+   left/right padding re-creates the same 1180px reading column every
+   .section already centers, so text lines up with the sections above
+   and below it. Reusable -- add this class to any future section to
+   extend the pattern. */
+.section-alt {
+  position: relative;
+  left: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  background: var(--paper-accent);
+  padding-left: calc((100vw - min(1180px, 100vw - 36px)) / 2);
+  padding-right: calc((100vw - min(1180px, 100vw - 36px)) / 2);
 }
 
 .section-heading {
