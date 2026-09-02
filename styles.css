@@ -3213,6 +3213,83 @@ h2 {
   font-size: 14px;
 }
 
+/* --- compact phrase list: a lighter-weight alternative to .mandarin-grid
+   for a short phrase set embedded inside a longer section, so it reads as
+   a quick reference rather than another full card grid on the page. --- */
+.phrase-list {
+  display: grid;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.phrase-list li {
+  padding: 11px 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.phrase-list li:last-child {
+  border-bottom: 0;
+}
+
+.phrase-list strong {
+  color: var(--ink);
+  font-weight: 850;
+}
+
+.phrase-list span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* --- compact mode-selector tiles: a lighter alternative to a full
+   .app-card grid for a fast "jump to the right section" chooser, so it
+   reads as a quick-glance index rather than six heavy feature cards. --- */
+.mode-select-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.mode-select-tile {
+  display: block;
+  padding: 16px 18px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  transition: border-color 150ms ease;
+}
+
+.mode-select-tile:hover,
+.mode-select-tile:focus-visible {
+  border-color: var(--teal);
+}
+
+.mode-select-tag {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.mode-select-tile h3 {
+  margin: 6px 0 3px;
+  font-size: 19px;
+}
+
+.mode-select-tile p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
 /* --- small circular icon badge that sits beside a section H2 to give each
    transport mode (or similarly-repeating topic) a quick visual identity --- */
 .mode-icon {
@@ -3263,7 +3340,8 @@ h2 {
   .top-pick-grid,
   .ink-grid,
   .icon-journey,
-  .mandarin-grid {
+  .mandarin-grid,
+  .mode-select-grid {
     grid-template-columns: 1fr;
   }
 
