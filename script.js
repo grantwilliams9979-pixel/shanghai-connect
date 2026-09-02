@@ -456,7 +456,10 @@ const copy = {
     ctaApps: "Essential apps",
     ctaChecklist: "Arrival checklist",
     ctaLiving: "Living in Shanghai",
-    ctaMoving: "Moving to Shanghai"
+    ctaMoving: "Moving to Shanghai",
+    ctaTitlePayments: "New to Shanghai? Get set up before you land.",
+    ctaCopyPayments:
+      "Set up Alipay and WeChat Pay, then work through the rest of your arrival checklist so the basics are handled before day one."
   },
   zh: {
     navStartHere: "从这里开始",
@@ -683,7 +686,9 @@ const copy = {
     ctaApps: "必备应用",
     ctaChecklist: "抵达清单",
     ctaLiving: "上海生活",
-    ctaMoving: "搬来上海"
+    ctaMoving: "搬来上海",
+    ctaTitlePayments: "刚到上海？落地前先设置好支付。",
+    ctaCopyPayments: "先设置好支付宝和微信支付，再完成抵达清单的其余部分，落地前把基础都安排好。"
   }
 };
 

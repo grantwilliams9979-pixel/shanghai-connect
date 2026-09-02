@@ -1465,6 +1465,10 @@ h2 {
   line-height: 1.65;
 }
 
+.notice-box p + p {
+  margin-top: 10px;
+}
+
 .notice-box p + ul {
   margin: 10px 0 0;
   padding-left: 18px;
@@ -2004,6 +2008,385 @@ h2 {
   stroke-linejoin: round;
 }
 
+.tool-tile-icon-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  color: var(--olive);
+  font-size: 13px;
+  font-weight: 850;
+}
+
+/* --- editorial 60/40 split hero (mobile payments guide) --- */
+.guide-hero-inner--split {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: clamp(32px, 6vw, 72px);
+  align-items: center;
+}
+
+.guide-hero-updated {
+  margin: 22px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 760;
+}
+
+.guide-hero-photo {
+  margin: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  aspect-ratio: 4 / 5;
+}
+
+.guide-hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* --- three-up variant of .app-list, plus a subtle "pick" treatment --- */
+.app-list--3up {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.app-icon--backup {
+  background: var(--bone);
+  color: var(--olive-dark);
+}
+
+.app-card--pick {
+  border-color: rgba(255, 107, 90, 0.35);
+  box-shadow: 0 0 0 1px rgba(255, 107, 90, 0.12) inset;
+}
+
+.pick-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 10px 0 0;
+  color: var(--coral-strong);
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.pick-badge::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--coral-strong);
+}
+
+/* --- "how paying works" two-column flow explainer --- */
+.how-it-works-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.flow-card {
+  padding: 30px 28px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.flow-card svg {
+  width: 34px;
+  height: 34px;
+  margin-bottom: 16px;
+  fill: none;
+  stroke: var(--olive);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.flow-card h3 {
+  margin: 0 0 8px;
+  font-size: 24px;
+}
+
+.flow-sub {
+  margin: 0 0 20px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.flow-steps {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.flow-steps .flow-step {
+  padding: 9px 13px;
+  background: var(--paper-accent);
+  border-radius: 999px;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 760;
+}
+
+.flow-arrow {
+  color: var(--steel);
+  font-size: 15px;
+}
+
+/* --- four-step onboarding "phone" walkthrough --- */
+.walkthrough-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.walkthrough-step {
+  padding: 26px 20px 30px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.walkthrough-step .journey-step {
+  margin: 0 auto;
+}
+
+.phone-mock {
+  position: relative;
+  width: 84px;
+  height: 148px;
+  margin: 20px auto 18px;
+  background: var(--paper-accent);
+  border: 2px solid var(--ink);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.phone-mock::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  width: 26px;
+  height: 4px;
+  background: var(--ink);
+  border-radius: 2px;
+  opacity: 0.55;
+  transform: translateX(-50%);
+}
+
+.phone-mock svg {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 32px;
+  height: 32px;
+  fill: none;
+  stroke: var(--olive);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.walkthrough-step h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.walkthrough-step p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* --- three-up variant of .score-grid for the fees section --- */
+.score-grid--3up {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.score-grid--3up article {
+  min-height: 0;
+  padding: 26px 22px;
+  text-align: left;
+}
+
+.score-grid article p {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* --- "works well / may not work" two-column capability grid --- */
+.capability-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.capability-card {
+  padding: 28px;
+  border-radius: 8px;
+}
+
+.capability-card h3 {
+  margin: 0 0 18px;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 850;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.capability-card ul {
+  display: grid;
+  gap: 11px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.capability-card li {
+  position: relative;
+  padding-left: 24px;
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.capability-card--works {
+  background: #eef3ed;
+  border: 1px solid rgba(14, 124, 102, 0.2);
+}
+
+.capability-card--works li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #0e7c66;
+  font-weight: 850;
+}
+
+.capability-card--limited {
+  background: #fff1ee;
+  border: 1px solid rgba(255, 107, 90, 0.22);
+}
+
+.capability-card--limited li::before {
+  content: "✕";
+  position: absolute;
+  left: 0;
+  color: var(--coral-strong);
+  font-weight: 850;
+}
+
+/* --- small image variant for a .timeline-card (transport: metro) --- */
+.timeline-card-img {
+  width: calc(100% + 48px);
+  height: 130px;
+  margin: -24px -24px 18px;
+  object-fit: cover;
+  border-radius: 7px 7px 0 0;
+  display: block;
+}
+
+/* --- four-up variant of .guide-grid --- */
+.guide-grid--4up {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+/* --- saveable-feeling checklist card --- */
+.checklist-card {
+  padding: 30px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.checklist-progress {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.checklist-progress-bar {
+  flex: 1;
+  height: 6px;
+  background: var(--bone);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.checklist-progress-bar span {
+  display: block;
+  height: 100%;
+  width: 0%;
+  background: var(--olive);
+  border-radius: 999px;
+  transition: width 200ms ease;
+}
+
+.checklist-count {
+  flex-shrink: 0;
+  color: var(--olive-dark);
+  font-size: 13px;
+  font-weight: 850;
+  white-space: nowrap;
+}
+
+.checklist {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.checklist li {
+  border-bottom: 1px solid var(--line);
+}
+
+.checklist li:last-child {
+  border-bottom: 0;
+}
+
+.checklist label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 2px;
+  cursor: pointer;
+}
+
+.checklist input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  accent-color: var(--olive);
+}
+
+.checklist label span {
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.checklist input:checked + span {
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
 @media (max-width: 880px) {
   .site-header {
     gap: 12px;
@@ -2046,8 +2429,19 @@ h2 {
   .journey-grid,
   .arrival-list--grid,
   .pdf-cta,
-  .newsletter {
+  .newsletter,
+  .guide-hero-inner--split,
+  .how-it-works-grid,
+  .capability-grid {
     grid-template-columns: 1fr;
+  }
+
+  .walkthrough-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .guide-hero-photo {
+    aspect-ratio: 16 / 10;
   }
 
   .pdf-mock {
@@ -2142,8 +2536,16 @@ h2 {
   .recommendation-box,
   .page-cta,
   .pdf-cta,
-  .journey-card {
+  .journey-card,
+  .flow-card,
+  .walkthrough-step,
+  .checklist-card,
+  .capability-card {
     padding: 18px;
+  }
+
+  .walkthrough-grid {
+    grid-template-columns: 1fr;
   }
 
   .app-row {
@@ -2206,6 +2608,11 @@ h2 {
   height: auto;
   border-radius: 8px;
   display: block;
+}
+
+.guide-figure--wide img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
 }
 
 .guide-figure figcaption {
