@@ -29,8 +29,13 @@
       "permanent": true
     },
     {
+      "source": "/guides/areas-to-live",
+      "destination": "/living-in-shanghai",
+      "permanent": true
+    },
+    {
       "source": "/guides/areas-to-live.html",
-      "destination": "/guides/areas-to-live",
+      "destination": "/living-in-shanghai",
       "permanent": true
     },
     {

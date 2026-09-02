@@ -27,7 +27,6 @@ The site is a static multi-page site with clean, extensionless URLs (each page l
 
 - [Essential Apps](guides/essential-apps/index.html)
 - [Best VPNs for China](guides/best-vpns-for-china/index.html)
-- [Areas to Live](guides/areas-to-live/index.html)
 - [Arrival Checklist](guides/arrival-checklist/index.html)
 - [Cost of Living](guides/cost-of-living-shanghai/index.html)
 - [Emergency Contacts & Healthcare](guides/emergency-contacts-healthcare/index.html)

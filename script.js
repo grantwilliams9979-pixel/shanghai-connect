@@ -76,19 +76,6 @@ const guides = [
     featured: true
   },
   {
-    category: "housing",
-    image: "assets/img/street-level/a-view-of-a-city-from-across-the-street--G-d47sb_Wwc.jpg",
-    title: { en: "Where to live in Shanghai", zh: "上海居住区域选择" },
-    summary: {
-      en: "A practical comparison of Jing'an, Xuhui, Pudong, Hongqiao, Changning, Huangpu, and family-friendly areas.",
-      zh: "实用对比静安、徐汇、浦东、虹桥、长宁、黄浦以及适合家庭的区域。"
-    },
-    tags: ["Jing'an", "Xuhui", "Pudong"],
-    meta: { en: "Areas", zh: "区域" },
-    link: "/guides/areas-to-live",
-    featured: true
-  },
-  {
     category: "daily-life",
     image: "assets/img/groceries/people-inside-a-traditional-asian-grocery-store--6F-XAZmDo1k.jpg",
     title: { en: "Foreign groceries and imported food", zh: "进口食品与外籍超市" },
@@ -172,7 +159,7 @@ const neighbourhoods = [
       zh: "梧桐街区、国际学校资源丰富，地铁便利，深受家庭租客喜爱。"
     },
     image: "assets/img/street-level/a-city-street-filled-with-lots-of-traffic-and-ta--iyKYXSC2RxE.jpg",
-    link: "/guides/areas-to-live#area-profiles"
+    link: "/living-in-shanghai"
   },
   {
     zh: "浦东",
@@ -183,7 +170,7 @@ const neighbourhoods = [
       zh: "商务区、家庭社区与滨江公园，前往浦东机场也更方便。"
     },
     image: "assets/img/homepage-hero/city-skyline-across-body-of-water-during-daytime--paew4TF9M_A.jpg",
-    link: "/guides/areas-to-live#area-profiles"
+    link: "/living-in-shanghai"
   },
   {
     zh: "古北",
@@ -194,7 +181,7 @@ const neighbourhoods = [
       zh: "历史悠久的国际化社区，熟悉的超市、餐厅和生活服务一应俱全。"
     },
     image: "assets/img/street-level/a-city-street-with-cars-and-a-tall-building-in-t--OkqTaSYTEFE.jpg",
-    link: "/guides/areas-to-live#area-profiles"
+    link: "/living-in-shanghai"
   },
   {
     zh: "虹桥",
@@ -205,7 +192,7 @@ const neighbourhoods = [
       zh: "靠近虹桥机场与火车站，社区安静，深受国际家庭欢迎。"
     },
     image: "assets/img/street-level/cars-on-road-in-between-high-rise-buildings-duri--4I9s1FM6K7I.jpg",
-    link: "/guides/areas-to-live#area-profiles"
+    link: "/living-in-shanghai"
   }
 ];
 
@@ -216,7 +203,6 @@ const copy = {
     navApps: "Apps",
     navNeighbourhoods: "Neighbourhoods",
     navLiving: "Living in Shanghai",
-    navAreas: "Areas",
     navPlan: "First week",
     crumbHome: "Home",
     crumbApps: "Essential apps",
@@ -467,7 +453,6 @@ const copy = {
     navApps: "应用",
     navNeighbourhoods: "居住区域",
     navLiving: "上海生活",
-    navAreas: "区域",
     navPlan: "第一周",
     crumbHome: "首页",
     crumbApps: "必备应用",
@@ -892,3 +877,39 @@ renderGuides();
 renderFeaturedGuides();
 renderNeighbourhoods();
 updateHeader();
+
+// Interactive checklist progress: wires up any .checklist-card's progress
+// bar/count to its checkboxes and remembers state per page in localStorage.
+// Generic (keys off structure, not fixed ids) so it works for every
+// checklist on the site, not just the one it was first built for.
+document.querySelectorAll(".checklist-card").forEach((card, cardIndex) => {
+  const boxes = card.querySelectorAll(".checklist input[type='checkbox']");
+  if (!boxes.length) return;
+  const bar = card.querySelector(".checklist-progress-bar span");
+  const count = card.querySelector(".checklist-count");
+  const storageKey = `sc-checklist:${window.location.pathname}:${cardIndex}`;
+
+  let saved = [];
+  try {
+    saved = JSON.parse(window.localStorage.getItem(storageKey) || "[]");
+  } catch (err) {
+    saved = [];
+  }
+  boxes.forEach((box, i) => {
+    if (saved[i]) box.checked = true;
+  });
+
+  const updateProgress = () => {
+    const done = Array.from(boxes).filter((box) => box.checked).length;
+    if (bar) bar.style.width = `${Math.round((done / boxes.length) * 100)}%`;
+    if (count) count.textContent = `${done} / ${boxes.length} done`;
+    try {
+      window.localStorage.setItem(storageKey, JSON.stringify(Array.from(boxes).map((box) => box.checked)));
+    } catch (err) {
+      /* localStorage unavailable (private mode, storage full) -- progress just won't persist */
+    }
+  };
+
+  boxes.forEach((box) => box.addEventListener("change", updateProgress));
+  updateProgress();
+});
