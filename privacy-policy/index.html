@@ -78,7 +78,7 @@
 
       <section class="section guide-intro" aria-labelledby="policy-status-title">
         <div>
-          <p class="eyebrow">Last updated: 4 July 2026</p>
+          <p class="eyebrow">Last updated: 4 September 2026</p>
           <h2 id="policy-status-title">Full policy text coming soon.</h2>
         </div>
         <p>
@@ -93,8 +93,8 @@
           <p>
             Shanghai Connect is a static informational website. We do not require accounts and we do not sell personal
             information. If you join the newsletter, we store the email address you provide and use it only to send the
-            updates you signed up for. Like most websites, we may use privacy-respecting analytics to understand which
-            guides are useful so we can improve them.
+            updates you signed up for. We use Vercel Speed Insights to measure real-world page performance so we can keep
+            the guides fast. It sets no cookies, does not track you across sites, and reports on pages rather than people.
           </p>
         </div>
         <div class="section-heading">
@@ -170,5 +170,10 @@
     </footer>
 
     <script src="/script.js?v=20260902c"></script>
+    <!-- Vercel Speed Insights: real-user Core Web Vitals -->
+    <script>
+      window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
   </body>
 </html>
