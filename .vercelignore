@@ -1,0 +1,9 @@
+# Files that live in the repo but must not be published to shanghai-connect.com.
+# Vercel already skips README.md and vercel.json; everything here is a working
+# file that was otherwise being served at its path (docs/*.md returned 200).
+docs/
+scripts/
+.github/
+CLAUDE.md
+assets/shanghai-connect-source-map.md
+*.xlsx
