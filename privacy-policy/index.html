@@ -93,8 +93,9 @@
           <p>
             Shanghai Connect is a static informational website. We do not require accounts and we do not sell personal
             information. If you join the newsletter, we store the email address you provide and use it only to send the
-            updates you signed up for. We use Vercel Speed Insights to measure real-world page performance so we can keep
-            the guides fast. It sets no cookies, does not track you across sites, and reports on pages rather than people.
+            updates you signed up for. We use Vercel Web Analytics and Speed Insights to see which guides are read and how
+            quickly pages load, so we can improve them. Neither sets cookies, neither tracks you across other websites, and
+            both report on pages rather than on people.
           </p>
         </div>
         <div class="section-heading">
@@ -170,6 +171,11 @@
     </footer>
 
     <script src="/script.js?v=20260902c"></script>
+    <!-- Vercel Web Analytics: page views and referrers -->
+    <script>
+      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
     <!-- Vercel Speed Insights: real-user Core Web Vitals -->
     <script>
       window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };

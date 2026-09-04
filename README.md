@@ -50,6 +50,7 @@ The site is a static multi-page site with clean, extensionless URLs (each page l
 - [vercel.json](vercel.json) — clean URLs, `www` → apex redirect, legacy `.html` redirects, cache and security headers
 - [.vercelignore](.vercelignore) — keeps working files out of the deploy (`docs/`, `scripts/`, `CLAUDE.md`, the image bank); they were previously served at their own paths
 - Google Search Console verified on the domain property, with `sitemap.xml` submitted
+- Vercel Web Analytics and Speed Insights, added as plain script tags before `</body>` on every page (no npm package — there is no build step to bundle one into)
 - Brand assets, logo mark, and favicon in [assets/brand/](assets/brand/)
 
 ## Repository structure
@@ -114,9 +115,8 @@ The site should feel like **Lonely Planet × Apple × Notion**, with the usabili
 
 1. Build remaining neighbourhood pages (Pudong, Xuhui, Changning, Hongqiao, Minhang, Putuo, Huangpu, Yangpu)
 2. Build remaining must-know guides (banking, visas, internet access, everyday living)
-3. Set up analytics — nothing is installed yet
-4. Watch Search Console coverage as the newly crawlable pages get indexed
-5. Migrate to Next.js + Sanity CMS per the technical plan
+3. Watch Search Console coverage as the newly crawlable pages get indexed
+4. Migrate to Next.js + Sanity CMS per the technical plan
 
 ## Future expansion
 
